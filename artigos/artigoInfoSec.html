@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Segurança da Informação: Grimório de um Cyber Aventureiro | CyberBlog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    
+  </head>
+  <body class="bg-gray-900 text-gray-100 font-mono leading-relaxed text-base">
+
+    <!-- Header -->
+    <header class="text-center py-12 px-4 border-b border-gray-700">
+      <h1 class="text-4xl font-bold text-green-400">Segurança da Informação: Grimório de um Cyber Aventureiro</h1>
+      <p class="text-gray-400 text-sm mt-2">Publicado em Abril de 2025</p>
+    </header>
+
+    <!-- Container principal -->
+    <div class="flex max-w-7xl mx-auto px-6 py-10">
+
+      <!-- Índice lateral -->
+      <aside class="hidden lg:block w-1/4 pr-8 sticky top-20 self-start">
+        <nav class="text-sm space-y-2 border-l border-gray-700 pl-4">
+          <p class="uppercase text-gray-500 text-xs mb-2">Seções</p>
+          <a href="#introducao" class="text-green-300 hover:underline block">O Começo da Jornada</a>
+          <a href="#triade" class="text-green-300 hover:underline block">Tríade CIA</a>
+          <a href="#Senhas" class="text-green-300 hover:underline block">Senhas Fracas</a>
+          <a href="#escalonamento" class="text-green-300 hover:underline block">Escalonamento de Privilégios</a>
+          <a href="#controle" class="text-green-300 hover:underline block">Controle de Acesso</a>
+          <a href="#resposta" class="text-green-300 hover:underline block">Resposta a Incidentes</a>
+          <a href="#minimo" class="text-green-300 hover:underline block">Princípio do Mínimo Privilégio</a>
+          <a href="#disclaimer" class="text-green-300 hover:underline block">Disclaimer</a>
+        </nav>
+      </aside>
+
+      <!-- Conteúdo do artigo -->
+      <main class="w-full lg:w-3/4 space-y-10" id="content">
+
+        <section>
+          <h2 class="text-xl font-semibold text-green-400">Sobre o Autor</h2>
+          <p class="text-lg mb-4">
+            Sou estudante de Segurança da Informação, focado em aprendizado constante e autodidata.
+          </p>
+          <p class="text-lg mb-4">
+            Escrevo este material como parte do meu portfólio, com o objetivo de compartilhar meus conhecimentos e habilidades de forma simples, acessível e gratuita com base no que venho aprendendo durante meus estudos e práticas em laboratórios.
+          </p>
+          <p class="text-lg mb-4">
+            Estou sempre em busca de novos conhecimentos, incluindo aprendizado autodidata, especialmente nas áreas de tecnologia e idiomas. Valorizo a autogestão, o aprendizado contínuo, ética no trabalho e dedicação como princípios fundamentais.
+          </p>
+          <p class="text-lg">
+            Não é fácil defini-la em 1 palavra, é uma área muito ampla, mas basicamente, envolve formas de proteger informações valiosas para pessoas ou grupos, evitando roubos ou perdas, ou minimizando os danos já causados.
+          </p>
+        </section>
+
+        <!-- Parágrafo 1 -->
+        <section id="introducao">
+          <h2 class="text-xl font-semibold text-green-400">O COMEÇO DA JORNADA</h2>
+          <p class="text-lg mb-4">
+            Antes de empunhar uma espada digital, todo aventureiro que se preze deve conhecer as regras do jogo. A primeira delas? Segurança da Informação, tão ignorada, mal aplicada, desconhecida por muitos, mas tão importante.
+          </p>
+          <p class="text-lg">
+            Não é fácil defini-la em 1 palavra, é uma área muito ampla, mas basicamente, envolve formas de proteger informações valiosas para pessoas ou grupos, evitando roubos ou perdas, ou minimizando os danos já causados.
+          </p>
+        </section>
+
+        <!-- Imagem -->
+        <section>
+          <img src="https://via.placeholder.com/800x400" alt="Ilustração do conteúdo" class="rounded-xl shadow-md mx-auto">
+          <p class="text-sm text-gray-500 mt-2 text-center">Figura 1: Diagrama simplificado da arquitetura segura.</p>
+        </section>
+
+        <!-- Parágrafo 2 -->
+        <section id="triade">
+          <h2 class="text-xl font-semibold text-green-400">TRÍADE CIA</h2>
+          <p class="text-lg mb-4">
+            Um dos tópicos mais básicos da Segurança da Informação são os 3 pilares, chamado de CIA (ou CID em português):
+          </p>
+          <br>
+          <ul>
+            <li><strong>Confidencialidade (Confidentiality):</strong> Só quem tem a chave certa pode abrir os portões.</li>
+            <li><strong>Integridade (Integrity):</strong> Os dados não podem ser alterados no caminho, ou seja, o que entra é o mesmo que sai.</li>
+            <li><strong>Disponibilidade (Availability):</strong> As informações devem estar acessíveis sempre que for necessário.</li>
+          </ul>
+          <br>
+          <p class="text-lg mb-4">
+            Ou seja, suas informações devem ser confidenciais (somente você ter acesso), integras (da mesma forma como você deixou) e devem estar disponíveis (sempre acessível para você).
+          </p>
+        </section>
+
+        <!-- Exemplo de código -->
+        <!-- <section id="exemplo">
+          <h2 class="text-2xl font-semibold text-green-400 mb-2">Exemplo de comando útil:</h2>
+          <pre><code class="language-bash">nmap -p- -T4 10.10.10.10</code></pre>
+          <p class="text-sm text-gray-400 mt-1">Esse comando realiza um escaneamento de todas as portas com velocidade ajustada.</p>
+        </section> -->
+
+        <!-- Parágrafo 3 -->
+        <section id="Senhas">
+          <h2 class="text-xl font-semibold text-green-400">SENHAS FRACAS</h2>
+          <p class="text-lg mb-4">
+            Um problema que normalmente acontece em empresas é colocar senhas fracas nos computadores dos usuários comuns acreditando que eles "não tem nada que pode acabar com a empresaˮ, sem saber o que é Escalonamento de Privilégios.
+          </p>
+          <p class="text-lg mb-4">
+            Um ataque hacker normalmente não começa no topo, os computadores mais básicos, que geralmente tem menos segurança, são os primeiros alvos (os primeiros a cair), e uma vez dentro, o atacante executa o escalonamento de privilégios.
+          </p>
+        </section>
+
+        <!-- Outra Imagem -->
+        <section>
+          <img src="https://via.placeholder.com/800x400" alt="Engenharia social" class="rounded-xl shadow-md mx-auto">
+          <p class="text-sm text-gray-500 mt-2 text-center">Figura 2: Exemplo de e-mail de phishing.</p>
+        </section>
+
+        <!-- Parágrafo 4 -->
+        <section id="escalonamento">
+          <h2 class="text-xl font-semibold text-green-400">ESCALONAMENTO DE PRIVILÉGIOS</h2>
+          <p class="text-lg mb-4">
+            Não existe uma única forma de escalonar privilégios, cada sistema é diferente um do outro, portanto, a técnica que funciona em um pode não funcionar em outro.
+          </p>
+          <p class="text-lg mb-4">
+            Mas a “arte de escalonar privilégios” em si consiste em obter acesso aos privilégios de outros usuários, geralmente explorando as permissões deles.
+          </p>
+          <p class="text-lg mb-4">
+            Esse tipo de ataque pode acontecer de várias formas, com exploração de vulnerabilidades em sistemas, aplicativos ou engenharia social.
+          </p>
+        </section>
+
+        <section>
+          <h3 class="text-xl font-semibold text-green-400">Escalonamento Horizontal:</h3>
+          <p class="text-lg mb-4">
+            Se trata de transitar entre contas do mesmo nível, como de um funcionário comum para outro.
+          </p>
+          <p class="text-lg mb-4">
+            O atacante consegue acesso ao computador de um usuário básico, e “transitaˮ entre os outros usuários de mesmo nível, por exemplo, um computador do setor administrativo sem muitos acessos, mas com vários computadores nesse setor, o atacante pode acessar todos esses computadores, e para piorar, se colaboradores que já deixaram a empresa ainda não tiveram os usuários deletados, é possível que seus dados sejam facilmente acessados em um escalonamento horizontal.
+          </p>
+          <p class="text-lg mb-4">
+            Ou então, os computadores do RH, que contém dados de todos os colaboradores da empresa, se um deles for invadido, praticamente todos os colaboradores (e se a empresa não removeu os dados dos colaboradores que saíram, o deles também) estão em risco.
+          </p>
+          <p class="text-lg mb-4">
+            E mesmo que o ataque não comece diretamente no RH, mas sim em um computador básico, é possível escalar para o RH, mas esse é outro tipo de escalonamento.
+          </p>
+        </section>
+
+        <section>
+          <h3 class="text-xl font-semibold text-green-400">Escalonamento Vertical:</h3>
+          <p class="text-lg mb-4">
+            Se trata de subir de nível, como de um funcionário para o administrador do sistema.
+          </p>
+          <p class="text-lg mb-4">
+            O atacante consegue acesso ao computador de um usuário básico, com poucos privilégios, e usa técnicas para escalar para usuários mais privilegiados, como o administrador, podendo alcançar o RH ou até a diretoria da empresa.
+          </p>
+        </section>
+
+        <section id="controle">
+          <h2 class="text-xl font-semibold text-green-400">CONTROLE DE ACESSO</h2>
+          <p class="text-lg mb-4">
+            Controlar o acesso é impedir que qualquer um acesse qualquer coisa, por exemplo, no ambiente empresarial, impedir que os funcionários acessem documentos da diretoria.
+          </p>
+          <p class="text-lg mb-4">
+            É o que impede que qualquer pessoa consiga ler ou adulterar arquivos/informações confidenciais.
+          </p>
+          <p class="text-lg mb-4">
+            Sem controle de acesso, qualquer colaborador poderia apagar os dados do servidor, acessar folhas de pagamento (algo que só o RH deveria ter acesso), instalar programas que não são confiáveis, podendo contaminar a empresa com vários tipos de vírus.
+          </p>
+          <p class="text-lg mb-4">
+            Fazendo uma analogia com uma construção, seria como se todas as chaves abrissem todas as portas, como a porta do banheiro e a porta do cofre serem abertas com a mesma chave da sala de convidados.
+          </p>
+          <p class="text-lg mb-4">
+            Ou, mesmo se houverem várias chaves, serem bagunçadas de modo que nem o dono saber qual chave abre cada porta.
+          </p>
+          <p class="text-lg mb-4">
+            Para evitar esses problemas, cada porta deve ter sua chave específica, e o administrador deve manter a organização e verificar quem tem cada acesso.
+          </p>
+          <p class="text-lg mb-4">
+            O grande problema é o quão ignorada é essa prática, mesmo quando as empresas tentam aplicar o controle de acesso, é comum que faltem organização e critérios claros.
+          </p>
+          <p class="text-lg mb-4">
+            Os usuários e grupos devem ter nomes padronizados (prática que pode ser facilmente quebrada com rotatividade de funcionários) para que o administrador saiba quais permissões conceder a cada um, e o administrador também deve ter pleno conhecimento de quais conteúdos podem ser acessados por cada usuário e/ou grupo.
+          </p>
+        </section>
+
+        <section>
+          <h3 class="text-xl font-semibold text-green-400">Boas Práticas de Controle de Acesso:</h3>
+          <ul>
+            <li>Criar usuários/grupos e permissões definidos por setor.</li>
+            <li>Implementar autenticação multifator (MFA) quando viável.</li>
+            <li>Fazer revisões de permissões frequentemente, especialmente após novas contratações/demissões.</li>
+            <li>Remover acessos de ex-funcionários imediatamente após a demissão.</li>
+            <li>Não permitir contas compartilhadas com com nomes genéricos (informações vagas).</li>
+          </ul>
+
+          <p class="text-lg mb-4">
+            Esse trabalho pode ser cansativo e consumir bastante tempo, mas é fundamental para evitar “usuários maliciosos” ou atacantes obtenham acesso a “objetos” que não deveriam.
+          </p>
+        </section>
+
+        <section id="resposta">
+          <h2 class="text-xl font-semibold text-green-400">RESPOSTA A INCIDENTES</h2>
+          <p class="text-lg mb-4">Nenhuma empresa ou instituição é uma uma muralha inquebrável, o que se pode fazer é prevenir ou minimizar os danos.</p>
+
+          <p class="text-lg mb-4">Responder incidentes é um processo, envolve identificar o que aconteceu, investigar como e quando aconteceu, barrar o avanço e recuperar-se, esses incidentes podem ser invasões, vazamentos, ransomware, phishing, ou vários outros.</p>
+
+          <p class="text-lg mb-4">Por exemplo, um cenário em que um colaborador clica em um link de phishing e fornece sua senha para o atacante que invade o sistema e inicia um ransomware.</p>
+
+          <p class="text-lg mb-4">Considerando que nenhuma empresa é 100% impenetrável, o que realmente faz a diferença é a resposta da empresa diante do incidente, ou seja, minimizar os danos com estratégia e preparo para proteger o que for mais importantes para a empresa.</p>
+
+          <p class="text-lg mb-4">Nesse cenário exemplo, uma boa resposta seria identificar a invasão rapidamente, fazendo o usuário ser bloqueado e a máquina é isolada (de modo a também preservar evidencias para investigações), então, remover a ameaça antes que se espalhasse.</p>
+
+          <p class="text-lg mb-4">Posteriormente, realizar um relatório com as “lições aprendidas” e as medidas preventivas são reforçadas.</p>
+          
+          <p class="text-lg mb-4">Sem uma resposta adequada, o ataque iria se espalhar, os dados seriam capturados e/ou vazados, e a empresa iria perder dinheiro e reputação, e dependendo da escala dos danos, poderia até falir.</p>
+
+          <p>Simplificando, é o “plano” a ser colocado em prática quando algo dá errado, para minimizar o impacto.</p>
+        </section>
+
+        <section id="minimo">
+          <h2 class="text-xl font-semibold text-green-400">PRINCÍPIO DO MÍNIMO PRIVILÉGIO</h2>
+          <p class="text-lg mb-4">Se um usuário só precisa acessar conteúdo X para exercer sua função, ele não precisa de acesso ao Y, exemplificando, um arqueiro só precisa de arco e flecha, um pescador só precisa da vara de pescar, não faz sentido o arqueiro carregar uma vara de pesca ou vice-versa.</p>
+
+          <p class="text-lg mb-4">Não é uma mera “desconfiançaˮ, é proteção.</p>
+
+          <p class="text-lg mb-4">No ambiente empresarial, o estagiário de logística não deve ter acesso ao sistema financeiro, além de desnecessário, é perigoso e confuso.</p>
+
+          <p class="text-lg mb-4">Um pequeno erro assim pode causar danos gigantescos a empresa, como facilitar vazamento de dados e escalonamento de privilégios, além de ataques internos, permitindo que arquivos importantes sejam deletados ou alterados (mesmo que sem querer), que backups seja desativados, que processos sejam quebrados ou mesmo que alguém instale um software indevido, em caso de malware (como um ransonware) facilita ainda mais que se espalhe.</p>
+
+          <p class="text-lg mb-4">Em caso de investigação de determinado incidente, se torna mais difícil identificar quem acessou o que, tornando mais trabalhoso o processo de identificar se foi acidente ou ataque.</p>
+        </section>
+
+        <section>
+          <h3 class="text-xl font-semibold text-green-400">Boas Práticas de Mínimo Privilégio: </h3>
+          <ul>
+            <li>Limitar os acessos pelas funções.</li>
+            <li>Não permitir contas com acesso de administrador para usuários comuns.</li>
+            <li>Revisões constantes.</li>
+            <li>Remover acessos de antigos funcionários.</li>
+          </ul>
+        </section>
+
+        <section id="disclaimer">
+          <h2 class="text-xl font-semibold text-green-400">DISCLAIMER</h2>
+          <p class="text-lg mb-4">Este material foi elaborado para compartilhar conhecimento de forma gratuita e acessível. Sou um estudante, e todo o conteúdo aqui apresentado reflete meus estudos, interpretações e experiências pessoais durante minha jornada de aprendizado.</p>
+
+          <p class="text-lg mb-4">Este artigo não tem fins comerciais e não possui qualquer vínculo. Todo o conteúdo foi desenvolvido de forma original, sem a intenção de reproduzir ou plagiar obras de terceiros.</p>
+
+          <p class="text-lg mb-4">Caso algum trecho ou imagem coincida com materiais já existentes, trata-se de coincidência não intencional e estou aberto a revisar/corrigir/remover o conteúdo, se necessário.</p>
+
+          <p class="text-lg mb-4">As informações aqui contidas não substituem orientações profissionais ou consultorias especializadas em segurança da informação.</p>
+
+          <p class="text-lg mb-4">As ilustrações presentes neste material foram geradas com inteligência artificial, para tornar a leitura mais visual e didática. Não representam pessoas/obras reais e não têm fins comerciais, sendo utilizadas unicamente como recurso ilustrativo e complementar ao conteúdo educativo.</p>
+
+          <p class="text-lg mb-4">Este material é parte do meu portfólio como estudante e tem como objetivo demonstrar habilidades, incentivar o aprendizado e colaborar com a comunidade.**
+        </section>
+        
+      </main>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="text-center text-gray-500 text-sm mt-16 mb-4">
+      ← <a href="../index.html" class="underline text-green-300">Voltar para os artigos</a> | © 2025 CyberLogs
+    </footer>
+
+  </body>
+</html>

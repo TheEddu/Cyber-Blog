@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artigos | CyberBlog</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-900 text-gray-100 font-mono">
+
+    <!-- Cabeçalho / Apresentação -->
+    <header class="text-center py-16 px-4">
+      <h1 class="text-4xl font-bold mb-4 text-green-400">CyberBlog</h1>
+      <p class="text-lg max-w-xl mx-auto text-gray-300">
+        Um repositório de ideias sobre segurança da informação, programação, hacking ético, nerdices...
+      </p>
+    </header>
+
+    <!-- Artigos -->
+    <main class="max-w-6xl mx-auto px-4 py-8 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Card 1 -->
+      <article class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+        <img src="./images/infoSec.jpg" alt="Thumb do Artigo Segurança da Informação: O Grimória do Cyver Aventureiro" class="w-full h-50 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-semibold text-green-400">Segurança da Informação: O Grimória do Cyber Aventureiro</h2>
+          <p class="text-gray-400 text-sm mt-2">Meu primeiro artigo, introdução a segurança da informação, alguns tópicos e conceitos fundamentais, baseado nos meus estudos.</p>
+          <a href="./artigos/artigoInfoSec.html" class="text-green-300 mt-4 inline-block hover:underline">Ler mais →</a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+        <img src="./images/senhasSeguras.jpg" alt="Thumb do Artigo Forjando Senhas Seguras" class="w-full h-50 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-semibold text-green-400">Forjando Senhas Seguras</h2>
+          <p class="text-gray-400 text-sm mt-2">Eu tive a idéia de desenvolver um projeto gerador de senhas seguras com Python, depois, veio a idéia de escrever um artigo sobre senhas seguras, então, decidi unir ambas idéias em um artigo.</p>
+          <a href="./artigos/artigoSenhas.html" class="text-green-300 mt-4 inline-block hover:underline">Ler mais →</a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+        <img src="https://via.placeholder.com/600x300" alt="Thumb do Artigo" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-xl font-semibold text-green-400">Título do Artigo 3</h2>
+          <p class="text-gray-400 text-sm mt-2">Alguma reflexão sobre segurança digital ou porque tudo está quebrado por design.</p>
+          <a href="artigo.html" class="text-green-300 mt-4 inline-block hover:underline">Ler mais →</a>
+        </div>
+      </article>
+    </main>
+
+    <footer class="text-center text-gray-500 text-sm mt-16 mb-4">
+      © 2025 CyberLogs. Cultivado no terminal.
+    </footer>
+  </body>
+</html>
