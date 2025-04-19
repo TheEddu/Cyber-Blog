@@ -1,5 +1,7 @@
 # Projeto Site de Artigos
 
+### Em andamento...
+
 ## Descrição
 
 Este projeto é meu site pessoal de artigos escritos por mim, desenvolvido com HTML e Tailwind CSS. Preferi criar uma plataforma limpa e moderna para exibir artigos de forma organizada e atraente. 
