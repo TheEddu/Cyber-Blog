@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FORJANDO SENHAS SEGURAS: COMO E POR QUE? | CyberBlog</title>
+    <title>FORJANDO SENHAS SEGURAS | CyberBlog</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     
   </head>
@@ -11,7 +11,7 @@
 
     <!-- Header -->
     <header class="text-center py-12 px-4 border-b border-gray-700">
-      <h1 class="text-4xl font-bold text-green-400">Segurança da Informação: Grimório de um Cyber Aventureiro</h1>
+      <h1 class="text-4xl font-bold text-green-400">Forjando Senhas Seguras</h1>
       <p class="text-gray-400 text-sm mt-2">Publicado em Abril de 2025</p>
     </header>
 
@@ -36,101 +36,153 @@
       <!-- Conteúdo do artigo -->
       <main class="w-full lg:w-3/4 space-y-10" id="content">
 
-        <section>
-          <h2 class="text-xl font-semibold text-green-400">Sobre o Autor</h2>
-          <p class="text-lg mb-4">
-            Sou estudante de Segurança da Informação, focado em aprendizado constante e autodidata.
-          </p>
-          
-        </section>
-
-        <!-- Parágrafo 1 -->
         <section id="introducao">
-          <h2 class="text-xl font-semibold text-green-400">O COMEÇO DA JORNADA</h2>
+          <h2 class="text-xl font-semibold text-green-400">Introdução</h2>
           <p class="text-lg mb-4">
+            Em um mundo cada vez mais digital, a segurança da informação tornou-se essencial, e uma das medidas mais básicas (mas importantíssima) é o uso de senhas seguras. A respeito disso, trabalhei em um projeto web de Gerador de Senhas Seguras, utilizando Python com Flask, HTML, Tailwind CSS e JavaScript, que serve para gerar senhas personalizadas com facilidade. Aqui, além de mostrar como a aplicação funciona, também discuto por que esse tema é tão importante.
+          </p>
+          <p class="text-lg mb-4">
+            Senhas fracas, algo que é obviamente incorreto, porém ainda muito praticado, frequentemente desconsideram que qualquer um pode entrar com um esforço mínimo. Elas deixam usuários e empresas expostos a riscos absurdos e abrem portas para outras invasões mais sérias.
+          </p>
+          <p class="text-lg mb-4">
+            Aqui, além de mostrar como a aplicação funciona, também discuto por que esse tema é tão importante.
+          </p>
+          <p class="text-lg mb-4">
+            O Gerador de Senhas Seguras é um exemplo prático de uma ferramenta simples que pode ajudar na segurança digital. Combinando tecnologias acessíveis e boas práticas de programação, é possível entregar soluções úteis e didáticas que podem ser aplicadas em projetos pessoais ou profissionais.
           </p>
         </section>
 
-        <!-- Imagem -->
-        <section>
-          <img src="https://via.placeholder.com/800x400" alt="Ilustração do conteúdo" class="rounded-xl shadow-md mx-auto">
-          <p class="text-sm text-gray-500 mt-2 text-center">Figura 1: Diagrama simplificado da arquitetura segura.</p>
-        </section>
-
-        <!-- Parágrafo 2 -->
         <section id="triade">
-          <h2 class="text-xl font-semibold text-green-400">TRÍADE CIA</h2>
+          <h2 class="text-xl font-semibold text-green-400">Vulnerabilidades Causadas por Senhas Fracas</h2>
           <p class="text-lg mb-4">
-            Um dos tópicos mais básicos da Segurança da Informação são os 3 pilares, chamado de CIA (ou CID em português):
+            Vulnerabilidades são bem conhecidas dos estudantes/profissionais e de atacantes, mas as pessoas de fora da área não fazem ideia do que são, e isso é um problema, pois o conhecimento é fundamental para a prevenção.
           </p>
+          <ul>
+            <li><strong class="text-green-400">Roubo de Dados Sensíveis:</strong> Provavelmente o mais assustador. Dados pessoais e bancários, informações de clientes, documentos ou arquivos confidenciais, tudo isso pode ser extraído e vazado com acesso à conta, uma vez que isso acontece, seus dados estarão disponíveis para qualquer um com interesse e recursos, mesmo que você não seja um alvo especifico, ainda pode uma vitima “aleatória”.
+            Principalmente no Brasil, onde os cidadãos tem CPF, com essas informações vazadas, é muito fácil ser uma vitima com compras (ou dividas) que não fez no seu nome.</li>
+            <li><strong class="text-green-400">Acesso Não Autorizado:</strong> Provavelmente o mais obvio de todos, porém, muitos nem pensam sobre a verdadeira extensão dos danos que um acesso não autorizado pode causar. Invasores podem acessar contas pessoais, corporativas ou administrativas, se isso acontecer, muito provavelmente não vai ser apenas curiosidade.</li>
+            <li><strong class="text-green-400">Instalação de Malware:</strong> O mais técnico da lista. Diversos programas maliciosos podem ser instalados, podem servir para manter o acesso do atacante, coletar mais informações com o tempo, usar a máquina para minerar criptomoedas, exibir “anúncios indesejados” ou até espionar pela câmera.</li>
+          </ul>
         </section>
 
-        <!-- Exemplo de código -->
-        <!-- <section id="exemplo">
-          <h2 class="text-2xl font-semibold text-green-400 mb-2">Exemplo de comando útil:</h2>
-          <pre><code class="language-bash">nmap -p- -T4 10.10.10.10</code></pre>
-          <p class="text-sm text-gray-400 mt-1">Esse comando realiza um escaneamento de todas as portas com velocidade ajustada.</p>
-        </section> -->
+        <section id="triade">
+          <h2 class="text-xl font-semibold text-green-400">Ataques Possíveis</h2>
+          <p class="text-lg mb-4">
+            Assim que uma senha é descoberta, diversos ataques são possíveis, como:
+          </p>
+          <ul>
+            <li><strong class="text-green-400">Credential Stuffing (”Preenchimento de Credenciais” é uma tradução possível):</strong> O atacante tenta conectar com o mesmo e-mail e senha vazados em outros serviços, como redes sociais ou aplicativos, como muitas pessoas reutilizam senhas, costumam conseguir.</li>
+            <li><strong class="text-green-400">Account Takeover (Tomada de Conta):</strong> Uma vez dentro, o atacante pode alterar os dados da conta (é comum que ao alterar a senha os outros dispositivos conectados sejam desconectados) e até realizar compras caso se trate de dados financeiros.</li>
+            <li><strong class="text-green-400">Phishing:</strong> Com as informações da conta (ou domínio sobre ela), o atacante pode montar e-mails ou mensagens extremamente convincentes para enganar colegas ou clientes.</li>
+            <li><strong class="text-green-400">Ransomware:</strong> Com acesso suficiente, é possível criptografar os arquivos importantes (ou a máquina toda) e pedir pagamento (normalmente em criptomoeda) em troca da liberação.</li>
+            <li><strong class="text-green-400">Espionagem Corporativa:</strong> Podendo acessar a rede de uma empresa, o atacante pode ter as informações sigilosas (contratos, planos, documentos de colaboradores, etc) na palma da mão, e posteriormente, vazar tudo isso.</li>
+          </ul>
+        </section>
 
-        <!-- Parágrafo 3 -->
+        <section id="triade">
+          <h2 class="text-xl font-semibold text-green-400">Tecnologias Utilizadas</h2>
+          <ul>
+            <li><strong class="text-green-400">Flask (Python) - </strong> Framework leve para desenvolvimento web.</li>
+            <li><strong class="text-green-400">HTML/CSS — </strong> Estrutura e estilo da interface.</li>
+            <li><strong class="text-green-400">JavaScript — </strong> Comunicação assíncrona com o backend (AJAX).</li>
+            <li><strong class="text-green-400">Python — </strong> Para geração e personalização das senhas.</li>
+          </ul>
+        </section>
+
+        <section>
+          <img src="/images/tree.png" alt="Estrutura do Projeto" class="rounded-xl shadow-md mx-auto">
+          <p class="text-sm text-gray-500 mt-2 text-center">Tree da estrutura do projeto.</p>
+        </section>
+
         <section id="Senhas">
-          <h2 class="text-xl font-semibold text-green-400">SENHAS FRACAS</h2>
+          <h2 class="text-xl font-semibold text-green-400">Ambiente Virtual Python no Ubuntu</h2>
           <p class="text-lg mb-4">
-            Um problema que normalmente acontece em empresas é colocar senhas fracas nos computadores dos usuários comuns acreditando que eles "não tem nada que pode acabar com a empresaˮ, sem saber o que é Escalonamento de Privilégios.
+            Antes de começar a escrever código, é importante preparar o ambiente.
           </p>
-        </section>
+          <p class="text-lg mb-4">Quando estamos desenvolvendo projetos em Python, é comum que diferentes aplicações precisem de versões diferentes das mesmas bibliotecas. Para evitar conflitos entre essas dependências, usamos ambientes virtuais.</p>
 
-        <!-- Outra Imagem -->
-        <section>
-          <img src="https://via.placeholder.com/800x400" alt="Engenharia social" class="rounded-xl shadow-md mx-auto">
-          <p class="text-sm text-gray-500 mt-2 text-center">Figura 2: Exemplo de e-mail de phishing.</p>
-        </section>
+          <p class="text-lg mb-4">Um ambiente virtual é como uma “área isolada” onde podemos instalar pacotes Python específicos para um projeto, sem interferir nas bibliotecas instaladas globalmente no sistema. Isso permite manter os projetos organizados e evitar conflitos de dependência.</p>
+          
+          <p class="text-lg mb-2">Para iniciar um ambiente virtual usamos `python3 -m venv venv`.</p>
+          
+          <p class="text-lg mb-2">O segundo “venv” é apenas o nome, podemos escolher outro. Para ativar o ambiente usamos `source venv/bin/activate`</p>
+          
+          <p class="text-lg mb-2">Esse “venv” no começo é o nome, portanto se você criou com um nome diferente deve coloca-lo aí.</p>
+          
+          <p class="text-lg mb-4">Após ativar no ambiente, o nome dele aparece entre parênteses no começo, aproveitei para verificar as versões do Python3 e pip3.</p>
 
-        <!-- Parágrafo 4 -->
-        <section id="escalonamento">
-          <h2 class="text-xl font-semibold text-green-400">ESCALONAMENTO DE PRIVILÉGIOS</h2>
-          <p class="text-lg mb-4">
-            Não existe uma única forma de escalonar privilégios, cada sistema é diferente um do outro, portanto, a técnica que funciona em um pode não funcionar em outro.
-          </p>
-        </section>
+          <section>
+            <img src="/images/version.png" alt="Verificação da versão de Python e pip" class="rounded-xl shadow-md mx-auto">
+            <p class="text-sm text-gray-500 mt-2 text-center">Verificação da versão de Python e pip.</p>
+          </section>
 
-        <section>
-          <h3 class="text-xl font-semibold text-green-400">Escalonamento Horizontal:</h3>
-          <p class="text-lg mb-4">
-            Se trata de transitar entre contas do mesmo nível, como de um funcionário comum para outro.
-          </p>
-        </section>
+          <p class="text-lg mb-4">Com ambos instalados podemos começar com a estrutura do projeto. Como vou usar Flask, é o que precisamos instalar, com pip install flask.</p>
+          
+          <section>
+            <img src="/images/flask.png" alt="Instalação do Flask." class="rounded-xl shadow-md mx-auto">
+            <p class="text-sm text-gray-500 mt-2 text-center">Instalação do Flask.</p>
+          </section>
 
-        <section>
-          <h3 class="text-xl font-semibold text-green-400">Escalonamento Vertical:</h3>
-          <p class="text-lg mb-4">
-            Se trata de subir de nível, como de um funcionário para o administrador do sistema.
-          </p>
-        </section>
+          <p class="text-lg mb-4">Para um pouco mais de segurança e profissionalismo, é bom criar o arquivo “requirements.txt”, ele armazena os “pré-requisitos” para executar o programa, desse modo, podemos “passar” para outra máquina e instalar essas dependências para que o programa possa ser executável, se enviar o programa com requirements.txt para o GitHub, quem baixar o programa pode executá-lo para que o programa funcione.</p>
+          <p class="text-lg">pip freeze serve para verificar quais são essas dependências.</p>
+          <p class="text-lg mb-4">Com o > requirements.txt essas dependências são adicionadas no arquivo.</p>
 
-        <section id="controle">
-          <h2 class="text-xl font-semibold text-green-400">CONTROLE DE ACESSO</h2>
-          <p class="text-lg mb-4">
-            Controlar o acesso é impedir que qualquer um acesse qualquer coisa, por exemplo, no ambiente empresarial, impedir que os funcionários acessem documentos da diretoria.
-          </p>
-        </section>
+          <section>
+            <img src="/images/freeze.png" alt="Criação do requirements.txt" class="rounded-xl shadow-md mx-auto">
+            <p class="text-sm text-gray-500 mt-2 text-center">Criação do requirements.txt.</p>
+          </section>
 
-        <section>
-          <h3 class="text-xl font-semibold text-green-400">Boas Práticas de Controle de Acesso:</h3>
-          <p class="text-lg mb-4">
-            Esse trabalho pode ser cansativo e consumir bastante tempo, mas é fundamental para evitar “usuários maliciosos” ou atacantes obtenham acesso a “objetos” que não deveriam.
-          </p>
-        </section>
-
-        <section id="resposta">
-          <h2 class="text-xl font-semibold text-green-400">RESPOSTA A INCIDENTES</h2>
-          <p class="text-lg mb-4">Nenhuma empresa ou instituição é uma uma muralha inquebrável, o que se pode fazer é prevenir ou minimizar os danos.</p>
         </section>
 
         <section id="minimo">
-          <h2 class="text-xl font-semibold text-green-400">PRINCÍPIO DO MÍNIMO PRIVILÉGIO</h2>
-          <p class="text-lg mb-4">Se um usuário só precisa acessar conteúdo X para exercer sua função, ele não precisa de acesso ao Y, exemplificando, um arqueiro só precisa de arco e flecha, um pescador só precisa da vara de pescar, não faz sentido o arqueiro carregar uma vara de pesca ou vice-versa.</p>
+          <h2 class="text-xl font-semibold text-green-400">O que é Flask?</h2>
+          <p class="text-lg mb-4">Flask é um framework de Python que serve para criar aplicações web.</p>
+
+          <p class="text-lg mb-4">O Flask funciona como o “cérebro” por trás do site, responsável por organizar como as páginas funcionam, como o que acontece quando um botão é clicado e como os dados são processados.</p>
+
+          <p class="text-lg mb-4">Enquanto o HTML, CSS e JavaScript são o “visual” do site (o que o usuário interage), o Flask atua “por baixo dos panos”.</p>
         </section>
+
+        <section id="minimo">
+          <h2 class="text-xl font-semibold text-green-400">O PROJETO</h2>
+          <p class="text-lg mb-4">Agora, com o ambiente e estrutura preparados, vamos para o código em si.</p>
+
+          <p class="text-lg mb-4">Esse é um formulário interativo que permite ao usuário gerar senhas seguras e personalizadas diretamente do navegador. Ele se conecta ao Flask, que gera a senha com base nas escolhas do usuário.</p>
+        </section>
+
+        <section id="minimo">
+          <h3 class="text-xl font-semibold text-green-400 mb-4">Começando (brevemente) com HTML e CSS (Tailwind)</h3>
+          <p class="text-lg mb-4"><strong class="text-green-400">Cabeçalho (head) - </strong>Importa o Tailwind CSS (ou um CSS comum) e define informações básicas da página, como o título.</p>
+
+          <p class="text-lg mb-4"><strong class="text-green-400">Corpo (body) - </strong>Contém os elementos visuais que o usuário interage, principalmente o Formulário (form), com um campo para escolher o tamanho da senha, 3 checkboxes para decidir se a senha terá letras maiúsculas, números e/ou caracteres especiais, e por fim o botão para gerar a senha.</p>
+        </section>
+
+        <section id="minimo">
+          <h3 class="text-xl font-semibold text-green-400 mb-4">Avançando com o Javascript</h3>
+
+          <p class="text-lg mb-2">Este script “recebe” o envio do formulário de geração de senhas. Quando o botão "Gerar Senha" é clicado, ele pega as opções marcadas pelo usuário (comprimento da senha, incluir maiúsculas, números e símbolos), envia essas informações para o servidor Flask, impede o recarregamento da página, recebe a senha gerada e exibe na tela.</p>
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         <section id="disclaimer">
