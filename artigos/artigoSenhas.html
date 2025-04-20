@@ -22,14 +22,20 @@
       <aside class="hidden lg:block w-1/4 pr-8 sticky top-20 self-start">
         <nav class="text-sm space-y-2 border-l border-gray-700 pl-4">
           <p class="uppercase text-gray-500 text-xs mb-2">Seções</p>
-          <a href="#introducao" class="text-green-300 hover:underline block">O Começo da Jornada</a>
-          <a href="#triade" class="text-green-300 hover:underline block">Tríade CIA</a>
-          <a href="#Senhas" class="text-green-300 hover:underline block">Senhas Fracas</a>
-          <a href="#escalonamento" class="text-green-300 hover:underline block">Escalonamento de Privilégios</a>
-          <a href="#controle" class="text-green-300 hover:underline block">Controle de Acesso</a>
-          <a href="#resposta" class="text-green-300 hover:underline block">Resposta a Incidentes</a>
-          <a href="#minimo" class="text-green-300 hover:underline block">Princípio do Mínimo Privilégio</a>
+          <a href="#introducao" class="text-green-300 hover:underline block">Introdução</a>
+          <a href="#vulnerabilidades" class="text-green-300 hover:underline block">Vulnerabilidades Causadas por Senhas Fracas</a>
+          <a href="#ataques" class="text-green-300 hover:underline block">Ataques Possíveis</a>
+          <a href="#tecnologias" class="text-green-300 hover:underline block">Tecnologias Utilizadas</a>
+          <a href="#estrutura" class="text-green-300 hover:underline block">Estrutura do Projeto</a>
+          <a href="#ambienteVirtual" class="text-green-300 hover:underline block">Ambiente Virtual Python no Ubuntu</a>
+          <a href="#flask" class="text-green-300 hover:underline block">O que é Flask?</a>
+          <a href="#projeto" class="text-green-300 hover:underline block">O Projeto</a>
+          <a href="#funcionalidades" class="text-green-300 hover:underline block">Funcionalidades da Aplicação</a>
+          <a href="#beneficios" class="text-green-300 hover:underline block">Benefícios da Aplicação</a>
+          <a href="#consideracoes" class="text-green-300 hover:underline block">Considerações sobre Segurança</a>
           <a href="#disclaimer" class="text-green-300 hover:underline block">Disclaimer</a>
+          <hr>
+          <a href="../index.html" class="underline text-green-300">← Voltar para os artigos</a>
         </nav>
       </aside>
 
@@ -52,7 +58,7 @@
           </p>
         </section>
 
-        <section id="triade">
+        <section id="vulnerabilidades">
           <h2 class="text-xl font-semibold text-green-400">Vulnerabilidades Causadas por Senhas Fracas</h2>
           <p class="text-lg mb-4">
             Vulnerabilidades são bem conhecidas dos estudantes/profissionais e de atacantes, mas as pessoas de fora da área não fazem ideia do que são, e isso é um problema, pois o conhecimento é fundamental para a prevenção.
@@ -65,7 +71,7 @@
           </ul>
         </section>
 
-        <section id="triade">
+        <section id="ataques">
           <h2 class="text-xl font-semibold text-green-400">Ataques Possíveis</h2>
           <p class="text-lg mb-4">
             Assim que uma senha é descoberta, diversos ataques são possíveis, como:
@@ -79,7 +85,7 @@
           </ul>
         </section>
 
-        <section id="triade">
+        <section id="tecnologias">
           <h2 class="text-xl font-semibold text-green-400">Tecnologias Utilizadas</h2>
           <ul>
             <li><strong class="text-green-400">Flask (Python) - </strong> Framework leve para desenvolvimento web.</li>
@@ -89,12 +95,13 @@
           </ul>
         </section>
 
-        <section>
+        <section id="estrutura">
+          <h3 class="text-xl font-semibold text-green-400 mb-4">Estrutura do Projeto</h3>
           <img src="/images/tree.png" alt="Estrutura do Projeto" class="rounded-xl shadow-md mx-auto">
           <p class="text-sm text-gray-500 mt-2 text-center">Tree da estrutura do projeto.</p>
         </section>
 
-        <section id="Senhas">
+        <section id="ambienteVirtual">
           <h2 class="text-xl font-semibold text-green-400">Ambiente Virtual Python no Ubuntu</h2>
           <p class="text-lg mb-4">
             Antes de começar a escrever código, é importante preparar o ambiente.
@@ -134,7 +141,7 @@
 
         </section>
 
-        <section id="minimo">
+        <section id="flask">
           <h2 class="text-xl font-semibold text-green-400">O que é Flask?</h2>
           <p class="text-lg mb-4">Flask é um framework de Python que serve para criar aplicações web.</p>
 
@@ -143,51 +150,124 @@
           <p class="text-lg mb-4">Enquanto o HTML, CSS e JavaScript são o “visual” do site (o que o usuário interage), o Flask atua “por baixo dos panos”.</p>
         </section>
 
-        <section id="minimo">
+        <section id="projeto">
           <h2 class="text-xl font-semibold text-green-400">O PROJETO</h2>
           <p class="text-lg mb-4">Agora, com o ambiente e estrutura preparados, vamos para o código em si.</p>
 
           <p class="text-lg mb-4">Esse é um formulário interativo que permite ao usuário gerar senhas seguras e personalizadas diretamente do navegador. Ele se conecta ao Flask, que gera a senha com base nas escolhas do usuário.</p>
         </section>
 
-        <section id="minimo">
+        <section>
           <h3 class="text-xl font-semibold text-green-400 mb-4">Começando (brevemente) com HTML e CSS (Tailwind)</h3>
           <p class="text-lg mb-4"><strong class="text-green-400">Cabeçalho (head) - </strong>Importa o Tailwind CSS (ou um CSS comum) e define informações básicas da página, como o título.</p>
 
           <p class="text-lg mb-4"><strong class="text-green-400">Corpo (body) - </strong>Contém os elementos visuais que o usuário interage, principalmente o Formulário (form), com um campo para escolher o tamanho da senha, 3 checkboxes para decidir se a senha terá letras maiúsculas, números e/ou caracteres especiais, e por fim o botão para gerar a senha.</p>
         </section>
 
-        <section id="minimo">
+        <section>
           <h3 class="text-xl font-semibold text-green-400 mb-4">Avançando com o Javascript</h3>
 
-          <p class="text-lg mb-2">Este script “recebe” o envio do formulário de geração de senhas. Quando o botão "Gerar Senha" é clicado, ele pega as opções marcadas pelo usuário (comprimento da senha, incluir maiúsculas, números e símbolos), envia essas informações para o servidor Flask, impede o recarregamento da página, recebe a senha gerada e exibe na tela.</p>
+          <p class="text-lg mb-4">Este script “recebe” o envio do formulário de geração de senhas. Quando o botão "Gerar Senha" é clicado, ele pega as opções marcadas pelo usuário (comprimento da senha, incluir maiúsculas, números e símbolos), envia essas informações para o servidor Flask, impede o recarregamento da página, recebe a senha gerada e exibe na tela.</p>
 
+          <section>
+            <img src="/images/javascript.png" alt="Código JavaScript explicado" class="rounded-xl shadow-md mx-auto">
+            <p class="text-sm text-gray-500 mt-2 text-center">Código JavaScript explicado.</p>
+          </section>
+
+          <p class="text-lg mb-4">Esse script transforma o formulário em algo interativo, que traz um retorno de algo real, não apenas visual, mas funcional, ele se comunica com o servidor para gerar a “senha à gosto do usuário”.</p>
 
         </section>
 
+        <section>
+          <h2 class="text-xl font-semibold text-green-400">Python</h2>
+            <p class="text-lg mb-4">
+              Finalmente chegando onde mais interessa: Python!
+            </p>
+          <h3 class="text-xl font-semibold text-green-400 mb-4">Backend (Flask)</h3>
+            <p class="text-lg mb-4">
+              O backend é responsável por gerar a senha com base nas escolhas do usuário.
+            </p>
 
+            <section>
+              <img src="/images/python.png" alt="Código Python explicado" class="rounded-xl shadow-md mx-auto">
+              <p class="text-sm text-gray-500 mt-2 text-center">Código Python explicado.</p>
+            </section>
 
+            <section class="mb-4" id="">
+              <h3 class="text-xl font-semibold text-green-400 mb-4">Rotas Flask</h3>
+                <p class="text-lg mb-4">
+                  Talvez a parte mais complexa do projeto…
+                </p>
+                <section>
+                  <img src="/images/rotasFlask.png" alt="Rotas Flask" class="rounded-xl shadow-md mx-auto">
+                  <p class="text-sm text-gray-500 mt-2 text-center">Rotas Flask.</p>
+                </section>
+            </section>
 
+            <p class="text-lg mb-4">No caso do Gerador de Senhas, o Flask funciona assim:</p>
+            <ol class="list-decimal list-inside mb-4">
+              <li>O usuário preenche o formulário no site.</li>
+              <li>O JavaScript pega essas informações (como tamanho da senha, se quer números ou caracteres especiais).</li>
+              <li>O JavaScript envia essas informações para o Flask.</li>
+              <li>O Flask usa Python para gerar uma senha segura com base no que foi pedido.</li>
+              <li>O Flask devolve a senha pronta.</li>
+              <li>O JavaScript exibe a senha na tela do usuário.</li>
+            </ol>
 
+            <p class="text-lg mb-4">Neste projeto, o Flask tem 3 papéis principais:</p>
+            
+            <ul>
+              <li><strong class="text-green-400">Exibir o site — </strong> Quando alguém acessa a página inicial (/), o Flask entrega o arquivo index.html, que mostra a interface do gerador de senhas.</li>
+              <li><strong class="text-green-400">Receber os dados do usuário — </strong> - O usuário escolhe o tamanho da senha e outras opções. Esses dados são enviados ao Flask por meio de uma requisição do JavaScript.</li>
+              <li><strong class="text-green-400">Gerar e devolver a senha — </strong> - Com as informações recebidas, o Flask monta uma senha aleatória e segura usando Python. Em seguida, envia essa senha de volta ao site para ser exibida.</li>
+            </ul>
+        </section>
 
+        
+        <section id="funcionalidades">
+          <h2 class="text-xl font-semibold text-green-400">Funcionalidades da Aplicação</h2>
+            <ul>
+              <li><strong class="text-green-400">Geração dinâmica de senhas — </strong> O backend gera uma nova senha a cada requisição.</li>
+              <li><strong class="text-green-400">Personalização — </strong> - O usuário define o comprimento e os tipos de caracteres a incluir.</li>
+              <li><strong class="text-green-400">Interface amigável — </strong> - O front-end é simples e direto.</li>
+            </ul>
+        </section>
 
+        <section id="beneficios">
+          <h2 class="text-xl font-semibold text-green-400">Benefícios da Aplicação</h2>
+            <ul>
+              <li><strong class="text-green-400">Requisição assíncrona — </strong> A comunicação entre frontend e backend é fluida, sem recarregar a página.</li>
+              <li><strong class="text-green-400">Segurança — </strong> - Senhas aleatórias são menos vulneráveis a ataques como força bruta e dicionário.</li>
+              <li><strong class="text-green-400">Usabilidade — </strong> - Simples para usuários leigos.</li>
+            </ul>
+        </section>
 
+        <section id="consideracoes">
+          <h2 class="text-xl font-semibold text-green-400">Considerações sobre Segurança</h2>
+          <p class="text-lg mb-4">Embora a geração de senhas seguras ajude bastante, a segurança não deve parar por aí. É importante também:</p>
+            <ul>
+              <li>Evitar reutilização de senhas;</li>
+              <li>Utilizar autenticação multifator (MFA);</li>
+              <li>Armazenar senhas com hash (em sistemas internos);</li>
+              <li>Usar gerenciadores de senhas para organizar as credenciais.</li>
+            </ul>
+        </section>
 
-
-
-
-
-
-
-
-
-
-
-
+        <hr>
 
         <section id="disclaimer">
           <h2 class="text-xl font-semibold text-green-400">DISCLAIMER</h2>
           <p class="text-lg mb-4">Este material foi elaborado para compartilhar conhecimento de forma gratuita e acessível. Sou um estudante, e todo o conteúdo aqui apresentado reflete meus estudos, interpretações e experiências pessoais durante minha jornada de aprendizado.</p>
+
+          <p class="text-lg mb-4">Este artigo não tem fins comerciais e não possui qualquer vínculo. Todo o conteúdo foi desenvolvido de forma original, sem a intenção de reproduzir ou plagiar obras de terceiros.</p>
+
+          <p class="text-lg mb-4">Caso algum trecho ou imagem coincida com materiais já existentes, trata-se de coincidência não intencional e estou aberto a revisar/corrigir/remover o conteúdo, se necessário.</p>
+
+          <p class="text-lg mb-4">As informações aqui contidas não substituem orientações profissionais ou consultorias especializadas em segurança da informação.</p>
+
+          <p class="text-lg mb-4">As ilustrações presentes neste material foram geradas com inteligência artificial, para tornar a leitura mais visual e didática. Não representam pessoas/obras reais e não têm fins comerciais, sendo utilizadas unicamente como recurso ilustrativo e complementar ao conteúdo educativo.</p>
+
+          <p class="text-lg mb-4">Este material é parte do meu portfólio como estudante e tem como objetivo demonstrar habilidades, incentivar o aprendizado e colaborar com a comunidade.**
         </section>
         
       </main>
@@ -195,7 +275,7 @@
 
     <!-- Rodapé -->
     <footer class="text-center text-gray-500 text-sm mt-16 mb-4">
-      ← <a href="../index.html" class="underline text-green-300">Voltar para os artigos</a> | © 2025 CyberLogs
+      © 2025 CyberLogs
     </footer>
 
   </body>
