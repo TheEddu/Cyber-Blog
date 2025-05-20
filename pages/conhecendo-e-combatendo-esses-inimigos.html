@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Malware: Conhecendo e Combatendo esses Inimigos | CyberBlog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 8px;
+        background: #e5e7eb;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #a7f3d0;
+        border-radius: 4px;
+      }
+      html, body {
+        height: 100%;
+      }
+      body {
+        min-height: 100vh;
+        background: #f4f6fa;
+      }
+    </style>
+  </head>
+  <body class="text-gray-800 font-sans bg-gray-50">
+    <!-- Cabeçalho Profissional -->
+    <header class="bg-gray-900 flex items-center border-b border-gray-200 px-8 py-4 shadow-sm fixed top-0 left-0 right-0 z-30" style="height: 72px;">
+      <img src="../images/MalwareConhecendoECombatendoEssesInimigos.jpg" alt="Logo Malware" class="w-12 h-12 rounded-lg mr-4 border border-green-400 shadow-sm" />
+      <div>
+        <h1 class="text-2xl font-bold text-green-600 tracking-tight">CyberBlog Relatórios</h1>
+        <span class="text-sm text-gray-500">Malware: Conhecendo e Combatendo</span>
+      </div>
+    </header>
+
+    <div class="flex pt-24 bg-stone-300 min-h-screen">
+      <!-- Sidebar / Sumário -->
+      <nav class="bg-gray-900 w-72 min-w-[220px] max-w-xs border-r border-gray-200 px-6 py-8 fixed top-18 left-0 bottom-0 z-20 overflow-y-auto rounded-tr-2xl rounded-br-2xl shadow-md"
+           style="margin-top:72px; height:calc(100vh - 72px);">
+        <h2 class="text-lg font-semibold text-green-700 mb-4">Sumário</h2>
+        <ul class="space-y-3 text-gray-300 text-base">
+          <li><a href="#conhecendo" class="hover:text-green-600 transition">Conhecendo o Inimigo</a></li>
+          <li><a href="#funcionamento" class="hover:text-green-600 transition">Como funciona um malware</a></li>
+          <li><a href="#tipos" class="hover:text-green-600 transition">Tipos de malware</a></li>
+          <li><a href="#prevenir" class="hover:text-green-600 transition">Como se prevenir</a></li>
+          <li><a href="#minimizar" class="hover:text-green-600 transition">Como Minimizar os Danos</a></li>
+          <li><a href="#resposta" class="hover:text-green-600 transition">Resposta a infecções</a></li>
+          <li><a href="#referencias" class="hover:text-green-600 transition">Referências</a></li>
+          <li><a href="#disclaimer" class="hover:text-green-600 transition">Disclaimer</a></li>
+        </ul>
+        <div class="mt-10 text-xs text-gray-400">
+          <a href="../index.html" class="hover:underline text-green-500">← Voltar para a página inicial</a>
+        </div>
+      </nav>
+
+      <!-- Conteúdo do artigo -->
+      <main class="flex-1 ml-80 max-w-3xl bg-white rounded-2xl shadow-xl px-10 py-12 mb-12 mt-0 border border-gray-200"
+            style="min-height:calc(100vh - 96px);">
+        <article>
+          <h2 class="text-3xl font-bold text-grey-700 mb-2">Malware: Conhecendo e Combatendo esses Inimigos</h2>
+          <p class="text-sm text-gray-500 mb-8">Publicado em Maio de 2025</p>
+
+          <section class="mb-10" id="conhecendo">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Conhecendo o Inimigo</h3>
+            <p class="mb-4">
+              Normalmente é chamado de vírus por leigos, eu não diria que está completamente errado, pois vírus realmente é um tipo de malware. No entanto, nem todo malware é um vírus.
+            </p>
+            <p class="mb-4">
+              Malware vem da junção das palavras Malicious Software (Software Malicioso), é qualquer programa, código ou script (um software) feito para “causar danos”, pode roubar dados, interromper operações, exibir anúncios, espionar o usuário, e muito mais. A principal característica que torna um Malware diferente de um software comum é a <strong>intenção maliciosa.</strong>
+            </p>
+          </section>
+
+          <section class="mb-10" id="funcionamento">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Como funciona um malware</h3>
+            <p class="mb-4">
+              Tudo começa com a <strong>Infiltração</strong>, podendo ser através de phishing, download de arquivos infectados, dispositivos USB comprometidos ou acesso a sites maliciosos.
+            </p>
+            <p class="mb-4">
+              Um exemplo comum é um e-mail (phishing) com um Malware anexado que engana o usuário para baixar o arquivo, de modo a executar o código malicioso.
+            </p>
+            <p class="mb-4">
+              Então o malware pode se disfarçar como um software legítimo, também há técnicas para evitar detecção.
+            </p>
+            <p>
+              Uma vez infiltrado, um Malware pode agir de diversas formas, pode roubar credenciais, informações ou arquivos pessoais e confidenciais, criptografar arquivos bloqueando o acesso aos dados e exigindo pagamento para resgate, espionar atividades do usuário e muito mais.
+            </p>
+          </section>
+
+          <section class="mb-10" id="tipos">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Tipos de malware e suas características</h3>
+            <h4 class="text-xl font-semibold mb-1 text-green-700">Vírus</h4>
+            <p class="mb-4">
+              Provavelmente o mais conhecido, é um tipo de malware que contamina o computador e se espalha por ele (assim como um vírus biológico faz no corpo humano). Normalmente depende de algumas ações do usuário, como baixar algum arquivo, clicar em algum link ou conectar um pendrive.
+            </p>
+            <p class="mb-4">
+              Estando dentro, não necessariamente ele vai começar a causar danos imediatamente, pois o usuário pode precisar (ingenuamente) clicar/executar alguma coisa.
+            </p>
+            <p class="mb-4">
+              Com o vírus em execução ele pode danificar arquivos, roubar dados ou comprometer o sistema.
+            </p>
+            <h4 class="text-xl font-semibold mb-1 text-green-700">Trojan (Cavalo de Troia)</h4>
+            <p class="mb-4">
+              Outro tipo extremamente popular, o nome vem da história da Grécia antiga em que a cidade de Tróia recebeu um grande cavalo de madeira de presente dos gregos, mas de noite os soldados gregos saíram de dentro do cavalo e devastaram a cidade.
+            </p>
+            <p class="mb-4">
+              Essa história por si só já ilustra como o malware funciona, ele vem disfarçado de um software comum, podendo ser um arquivo, ou downloads de programas ou jogos piratas, ou até mesmo atualizações falsas.
+            </p>
+            <p class="mb-4">
+              Com um Trojan infiltrado o usuário fica praticamente na palma da mão do atacante, não é impossível remover, existe software capaz de fazer varredura e remoção, mas dependendo do quão longe o Malware se alastrou, pode ser necessário formatar o computador, se for um computador pessoal sem muita coisa importante, pode ser até melhor formatar logo no inicio, para evitar prejuízos maiores.
+            </p>
+            <h4 class="text-xl font-semibold mb-1 text-green-700">Ransomware</h4>
+            <p class="mb-4">
+              Desconhecido pelo nome, mas popular em casos e notícias.
+            </p>
+            <p class="mb-4">
+              Acontece com download indevido, phishing ou exploração de vulnerabilidades.
+            </p>
+            <p class="mb-4">
+              Se trata de um malware que criptografa dados, ou seja, os dados ficam inacessíveis, pois precisam de uma “chave de acesso” que só os atacantes têm, então exigem pagamento (normalmente em criptomoeda) para fornecer a chave de liberação dos dados.
+            </p>
+            <p class="mb-4">
+              Para piorar a situação ainda mais, os dados criptografados também podem ser vazados, o atacante pode fazer uma ameaça de publicar os dados caso se recuse a pagar. Ou então, podem ameaçar simplesmente deletá-los.
+            </p>
+            <p class="mb-4">
+              Porém, não se pode confiar que vão simplesmente entregar a chave assim que o pagamento cair, pois é possível que não liberem o conteúdo após o pagamento, se isso acontecer com uma pessoa comum, pode ser mais apropriado não pagar e “aceitar a perda” (eis a importância de ter backups atualizados).
+            </p>
+            <p class="mb-4">
+              No caso de uma empresa, com muitos dados importantes, e mais recursos financeiros também, pode ser uma melhor opção “correr o risco” de TALVEZ recuperar do que NÃO recuperar, pois essa situação pode levar a empresa à falência. Mais uma vez: backups são importantíssimos.
+            </p>
+            <h4 class="text-xl font-semibold mb-1 text-green-700">Rootkits</h4>
+            <p class="mb-4">
+              Menos conhecidos, são desenvolvidos de modo a ocultar as atividades e fazer “maldades silenciosas”. Atua no “interior” do computador, é extremamente difícil de identificar, praticamente indetectável por antivírus comuns.
+            </p>
+            <p class="mb-4">
+              A invasão pode começar com exploração de alguma vulnerabilidade, também pode acontecer com a conexão de USB (como pendrive) contaminado.
+            </p>
+            <p class="mb-4">
+              Os danos podem ser vários, o atacante pode conseguir acesso remoto ao computador infectado, conseguindo acessar praticamente tudo que tem no computador. Pode escalar ainda mais níveis, atingindo até mesmo o roteador.
+            </p>
+            <p class="mb-4">
+              Também é possível infectar a memória RAM, adicionando recursos que esgotam a memória, fazendo com que o computador fique lento.
+            </p>
+            <p class="mb-4">
+              Por chegar tão fundo no sistema (mais especificamente no firmware ou na BIOS/UEFI), pode ser que não seja possível removê-lo nem mesmo formatando o computador.
+            </p>
+            <h4 class="text-xl font-semibold mb-1 text-green-700">Spyware</h4>
+            <p class="mb-4">
+              Spy é espião em inglês, sabendo disso fica fácil de entender, é um malware feito para roubar dados sensíveis, monitora as ações do usuário, inclusive, pode coletar o que o usuário digita.
+            </p>
+            <p class="mb-4">
+              Spywares mais avançados também podem acessar microfone e câmera, podendo literalmente monitorar o que o usuário faz e fala.
+            </p>
+            <p class="mb-4">
+              Pode ser difícil de desconfiar que seu computador foi contaminado com isso, pois os principais sinais são desempenho lento do computador, que pode ser confundido com “muita coisa no computador” e anúncios frequentes, que podem ser confundidos com “chatice” de algum site.
+            </p>
+            <p class="mb-4">
+              As consequências são vastas, pois os dados podem ser vazados ou vendidos, se capturaram informações bancárias, pode ser ainda mais prejudicial.
+            </p>
+            <p class="mb-4">
+              Relacionado ao Spyware, há outros 2 tipos de malware, Adware e Keylogger.
+            </p>
+            <h4 class="text-xl font-semibold mb-1 text-green-700">Adware</h4>
+            <p class="mb-4">
+              Desenvolvido para exibir anúncios, normalmente em navegadores, podem aparecer pop-up ou na própria tela do sistema.
+            </p>
+            <p class="mb-4">
+              Não necessariamente é um Spyware, mas também pode coletar dados do usuário para exibir assuntos mais específicos, como um Spyware.
+            </p>
+            <p class="mb-4">
+              A infecção pode acontecer com download indevido, como programas ou jogos piratas, phishing ou até exploração de vulnerabilidade.
+            </p>
+            <h4 class="text-xl font-semibold mb-1 text-green-700">Keylogger</h4>
+            <p class="mb-4">
+              Um tipo de malware bem avançado, ele coleta o que é digitado, inclusive senhas e dados de cartões, dependendo do nível do malware, pode até capturar a tela do usuário.
+            </p>
+            <p class="mb-4">
+              Pode causar danos absurdos, especialmente se dados de cartões e senhas forem coletados, em caso de uma empresa, pode causar danos quase impossíveis de recuperar, pois podem ter muitos dados importantes vazados, ou até sofrerem com transações bancárias.
+            </p>
+            <h4 class="text-xl font-semibold mb-1 text-green-700">Worms</h4>
+            <p class="mb-4">
+              Significa “verme”, sua principal característica é a autopropagação, ou seja, ele se espalha rapidamente sem precisar da ação dos usuários. Os worms buscam vulnerabilidades para infectar outros dispositivos automaticamente, podendo abrir portas para outros malwares mais perigosos. Essa replicação pode acontecer através de redes ou até e-mails.
+            </p>
+            <p class="mb-4">
+              Além disso, o worm pode causar lentidão na máquina, devido ao uso excessivo de recursos, e também destruir ou criptografar arquivos.
+            </p>
+            <p class="mb-4">
+              Para prevenir, Firewall pode ser útil, para bloquear e monitorar a rede. Backups também são sempre úteis.
+            </p>
+            <h4 class="text-xl font-semibold mb-1 text-green-700">Cryptojacking</h4>
+            <p class="mb-4">
+              As criptomoedas se tornaram muito valiosas nos últimos anos, e podem ser obtidas através de mineração. O Cryptojacking é um tipo de malware que, ao invadir um sistema, sequestra os recursos do computador para utilizá-los na mineração de criptomoedas, gerando lucro para o atacante às custas do hardware e energia da vítima.
+            </p>
+            <p class="mb-4">
+              Pode acontecer com engenharia social ou exploração de vulnerabilidades. Alguns sites legítimos podem ser comprometidos, e então, o usuário comum, ao acessar um desses sites ingenuamente, pode acabar infectado.
+            </p>
+            <p class="mb-4">
+              Um sintoma comum é lentidão extrema e superaquecimento do computador. Além disso, o Cryptojacking pode servir como porta de entrada para outros malwares.
+            </p>
+            <h4 class="text-xl font-semibold mb-1 text-green-700">Wiper</h4>
+            <p class="mb-4">
+              Desenvolvido para destruir ou apagar dados definitivamente, podendo causar danos irreversíveis. Ele substitui os arquivos por valores aleatórios e sobrescreve valores.
+            </p>
+            <p class="mb-4">
+              Alguns são capazes de apagar o MBR (Master Boot Record), o que impede que o sistema operacional seja iniciado. Também podem desativar ou apagar backups automáticos (e até mesmo backups que estejam conectados à máquina durante o ataque) e até eliminar pontos de restauração.
+            </p>
+            <p class="mb-4">
+              Portanto, os danos podem ser irreversíveis. É uma das formas mais agressivas de malware, usada para causar o máximo de prejuízo possível, acontecendo sem nem mesmo exigência de resgate.
+            </p>
+          </section>
+
+          <section class="mb-10" id="prevenir">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Como se prevenir</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li>Antivírus/antimalware: Soluções confiáveis com detecção em tempo real.</li>
+              <li>Firewall: Para bloquear tráfego malicioso.</li>
+              <li>Sistemas operacionais e aplicativos: Devem ser sempre mantidos atualizados.</li>
+              <li>E-mails e downloads: Não clique em anexos de desconhecidos e verifique bem os links antes de clicar.</li>
+              <li>Dispositivos externos: Evitar o uso de pendrives ou semelhantes de origem desconhecida.</li>
+              <li>Autenticação multifator (MFA): Se possível, deve-se utilizar MFA.</li>
+            </ul>
+          </section>
+
+          <section class="mb-10" id="minimizar">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Como Minimizar os Danos</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li>Backups: Dados importantes devem ter backups frequentes, em mais de um lugar, preferencialmente, uma cópia offline e uma em nuvem. Também devem ser testados regularmente.</li>
+              <li>Isolamento de sistemas: Manter servidores separados para evitar propagação de ameaças.</li>
+              <li>Monitoramento Contínuo: Ferramentas e equipe especializada para monitoramento.</li>
+            </ul>
+          </section>
+
+          <section class="mb-10" id="resposta">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Resposta a infecções</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li>Isolamento: Dispositivos infectados devem ser desconectados da rede imediatamente.</li>
+              <li>Análise: Usar ferramentas para tentar identificar o tipo de malware.</li>
+              <li>Contenção: Desativar contas comprometidas e redefinir senhas.</li>
+              <li>Restauração: Restaurar o que for necessário a partir de backups.</li>
+              <li>Auditoria: Identificar a origem do ataque e corrigir as falhas.</li>
+              <li>Comunicação: Notifique quem pode ter sido prejudicado e, se necessário, as autoridades.</li>
+            </ul>
+          </section>
+
+          <section class="mb-10" id="referencias">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Referências</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1 text-sm">
+              <li>Surfshark. O que é vírus de computador? <a href="https://surfshark.com/pt-br/blog/o-que-e-virus-computador" class="text-green-600 hover:underline" target="_blank">https://surfshark.com/pt-br/blog/o-que-e-virus-computador</a></li>
+              <li>Surfshark. O que é Trojan? <a href="https://surfshark.com/pt-br/blog/o-que-e-trojan" class="text-green-600 hover:underline" target="_blank">https://surfshark.com/pt-br/blog/o-que-e-trojan</a></li>
+              <li>Malwarebytes. Trojan. <a href="https://www.malwarebytes.com/pt/trojan" class="text-green-600 hover:underline" target="_blank">https://www.malwarebytes.com/pt/trojan</a></li>
+              <li>IBM. O que é Ransomware? <a href="https://www.ibm.com/br-pt/topics/ransomware" class="text-green-600 hover:underline" target="_blank">https://www.ibm.com/br-pt/topics/ransomware</a></li>
+              <li>Fortinet. Rootkit - O que é? <a href="https://www.fortinet.com/br/resources/cyberglossary/rootkit" class="text-green-600 hover:underline" target="_blank">https://www.fortinet.com/br/resources/cyberglossary/rootkit</a></li>
+              <li>Fortinet. O que é Adware? <a href="https://www.fortinet.com/br/resources/cyberglossary/what-is-adware" class="text-green-600 hover:underline" target="_blank">https://www.fortinet.com/br/resources/cyberglossary/what-is-adware</a></li>
+              <li>Tecnoblog. O que é um Spyware? <a href="https://tecnoblog.net/responde/o-que-e-um-spyware/" class="text-green-600 hover:underline" target="_blank">https://tecnoblog.net/responde/o-que-e-um-spyware/</a></li>
+              <li>Malwarebytes. Keylogger. <a href="https://www.malwarebytes.com/pt-br/keylogger" class="text-green-600 hover:underline" target="_blank">https://www.malwarebytes.com/pt-br/keylogger</a></li>
+              <li>NordVPN. O que é Worm? <a href="https://nordvpn.com/pt-br/blog/o-que-e-worm/" class="text-green-600 hover:underline" target="_blank">https://nordvpn.com/pt-br/blog/o-que-e-worm/</a></li>
+              <li>Zscaler. O que é Cryptojacking? <a href="https://www.zscaler.com/br/zpedia/what-is-cryptojacking" class="text-green-600 hover:underline" target="_blank">https://www.zscaler.com/br/zpedia/what-is-cryptojacking</a></li>
+              <li>Kaspersky. Wiper e outros tipos de malware destrutivos. <a href="https://www.kaspersky.com.br/blog/wiper-e-outros-tipos-de-malware-destrutivos/2097/" class="text-green-600 hover:underline" target="_blank">https://www.kaspersky.com.br/blog/wiper-e-outros-tipos-de-malware-destrutivos/2097/</a></li>
+            </ul>
+          </section>
+
+          <section class="mb-10" id="disclaimer">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Disclaimer</h3>
+            <p class="mb-4">
+              Este material foi elaborado para compartilhar conhecimento de forma gratuita e acessível. Sou um estudante, e todo o conteúdo aqui apresentado reflete meus estudos, interpretações e experiências pessoais durante minha jornada de aprendizado.
+            </p>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li>Este artigo não tem fins comerciais e não possui qualquer vínculo.</li>
+              <li>Todo o conteúdo foi desenvolvido de forma original, sem a intenção de reproduzir ou plagiar obras de terceiros.</li>
+              <li>Caso algum trecho coincida com materiais já existentes, trata-se de coincidência não intencional e estou aberto a revisar/corrigir/remover o conteúdo, se necessário.</li>
+              <li>As informações aqui contidas não substituem orientações profissionais ou consultorias especializadas em segurança da informação.</li>
+              <li>As ilustrações presentes neste material foram geradas por inteligência artificial ou obtidas de fontes de imagens de uso livre, com o objetivo de tornar a leitura mais visual e didática. Elas não representam pessoas, obras reais ou eventos específicos, não possuem fins comerciais e são utilizadas exclusivamente como recurso ilustrativo e complementar ao conteúdo educativo.</li>
+            </ul>
+            <p>
+              Este material é parte do meu portfólio como estudante e tem como objetivo demonstrar habilidades, incentivar o aprendizado e colaborar com a comunidade.
+            </p>
+          </section>
+
+          <p class="text-center text-gray-400 mt-12">© 2025 CyberBlog</p>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

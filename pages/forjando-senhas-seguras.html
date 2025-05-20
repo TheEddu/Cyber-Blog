@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forjando Senhas Seguras: Como e Por Quê? | CyberBlog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 8px;
+        background: #e5e7eb;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #a7f3d0;
+        border-radius: 4px;
+      }
+      html, body {
+        height: 100%;
+      }
+      body {
+        min-height: 100vh;
+        background: #f4f6fa;
+      }
+    </style>
+  </head>
+  <body class="text-gray-800 font-sans bg-gray-50">
+    <!-- Cabeçalho Profissional -->
+    <header class="bg-gray-900 flex items-center border-b border-gray-200 px-8 py-4 shadow-sm fixed top-0 left-0 right-0 z-30" style="height: 72px;">
+      <img src="../images/password.jpg" alt="Logo Senhas Seguras" class="w-12 h-12 rounded-lg mr-4 border border-green-400 shadow-sm" />
+      <div>
+        <h1 class="text-2xl font-bold text-green-600 tracking-tight">CyberBlog Relatórios</h1>
+        <span class="text-sm text-gray-500">Forjando Senhas Seguras</span>
+      </div>
+    </header>
+
+    <div class="flex pt-24 bg-stone-300 min-h-screen">
+      <!-- Sidebar / Sumário -->
+      <nav class="bg-gray-900 w-72 min-w-[220px] max-w-xs border-r border-gray-200 px-6 py-8 fixed top-18 left-0 bottom-0 z-20 overflow-y-auto rounded-tr-2xl rounded-br-2xl shadow-md"
+           style="margin-top:72px; height:calc(100vh - 72px);">
+        <h2 class="text-lg font-semibold text-green-700 mb-4">Sumário</h2>
+        <ul class="space-y-3 text-gray-300 text-base">
+          <li><a href="#introducao" class="hover:text-green-600 transition">Introdução</a></li>
+          <li><a href="#vulnerabilidades" class="hover:text-green-600 transition">Vulnerabilidades</a></li>
+          <li><a href="#ataques" class="hover:text-green-600 transition">Ataques Possíveis</a></li>
+          <li><a href="#tecnologias" class="hover:text-green-600 transition">Tecnologias Utilizadas</a></li>
+          <li><a href="#estrutura" class="hover:text-green-600 transition">Estrutura</a></li>
+          <li><a href="#ambiente" class="hover:text-green-600 transition">Ambiente Virtual Python</a></li>
+          <li><a href="#flask" class="hover:text-green-600 transition">O que é Flask?</a></li>
+          <li><a href="#projeto" class="hover:text-green-600 transition">O Projeto</a></li>
+          <li><a href="#frontend" class="hover:text-green-600 transition">Frontend</a></li>
+          <li><a href="#javascript" class="hover:text-green-600 transition">Javascript</a></li>
+          <li><a href="#python" class="hover:text-green-600 transition">Python/Backend</a></li>
+          <li><a href="#funcionalidades" class="hover:text-green-600 transition">Funcionalidades</a></li>
+          <li><a href="#beneficios" class="hover:text-green-600 transition">Benefícios</a></li>
+          <li><a href="#consideracoes" class="hover:text-green-600 transition">Considerações sobre Segurança</a></li>
+          <li><a href="#disclaimer" class="hover:text-green-600 transition">Disclaimer</a></li>
+        </ul>
+        <div class="mt-10 text-xs text-gray-400">
+          <a href="../index.html" class="hover:underline text-green-500">← Voltar para a página inicial</a>
+        </div>
+      </nav>
+
+      <!-- Conteúdo do artigo -->
+      <main class="flex-1 ml-80 max-w-3xl bg-white rounded-2xl shadow-xl px-10 py-12 mb-12 mt-0 border border-gray-200"
+            style="min-height:calc(100vh - 96px);">
+        <article>
+          <h2 class="text-3xl font-bold text-grey-700 mb-2">Forjando Senhas Seguras: Como e Por Quê? (Com projeto Full Stack gerador de senhas)</h2>
+          <p class="text-sm text-gray-500 mb-8">Publicado em Abril de 2025</p>
+
+          <section class="mb-10" id="introducao">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Introdução</h3>
+            <p class="mb-4">
+              Em um mundo cada vez mais digital, a segurança da informação tornou-se essencial, e uma das medidas mais básicas (mas importantíssima) é o uso de senhas seguras. A respeito disso, trabalhei em um projeto web de Gerador de Senhas Seguras, utilizando Python com Flask, HTML, Tailwind CSS e JavaScript, que serve para gerar senhas personalizadas com facilidade.
+            </p>
+            <p class="mb-4">
+              Senhas fracas, algo que é obviamente incorreto, porém ainda muito praticado, frequentemente desconsideram que qualquer um pode entrar com um esforço mínimo. Elas deixam usuários e empresas expostos a riscos absurdos e abrem portas para outras invasões mais sérias.
+            </p>
+            <p>
+              O Gerador de Senhas Seguras é um exemplo prático de uma ferramenta simples que pode ajudar na segurança digital. Combinando tecnologias acessíveis e boas práticas de programação, é possível entregar soluções úteis e didáticas que podem ser aplicadas em projetos pessoais ou profissionais.
+            </p>
+          </section>
+
+          <section class="mb-10" id="vulnerabilidades">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Vulnerabilidades Causadas por Senhas Fracas</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li><strong>Acesso Não Autorizado:</strong> Invasores podem acessar contas pessoais, corporativas ou administrativas, causando danos sérios.</li>
+              <li><strong>Escalonamento de Privilégios:</strong> Acesso a contas comuns pode ser usado para obter permissões maiores.</li>
+              <li><strong>Movimentação Lateral:</strong> Em empresas, um acesso pode permitir transitar para outros sistemas internos.</li>
+              <li><strong>Roubo de Dados Sensíveis:</strong> Dados pessoais, bancários e confidenciais podem ser extraídos e vazados.</li>
+              <li><strong>Instalação de Malware:</strong> Programas maliciosos podem ser instalados para manter acesso, coletar informações ou espionar.</li>
+            </ul>
+          </section>
+
+          <section class="mb-10" id="ataques">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Ataques Possíveis</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li><strong>Credential Stuffing:</strong> Testar e-mails e senhas vazados em outros serviços.</li>
+              <li><strong>Account Takeover:</strong> Tomada de conta, alteração de dados e possíveis compras.</li>
+              <li><strong>Phishing:</strong> Uso de contas comprometidas para enganar outros usuários.</li>
+              <li><strong>Ransomware:</strong> Criptografia de arquivos e pedido de resgate.</li>
+              <li><strong>Espionagem Corporativa:</strong> Acesso e vazamento de informações sigilosas de empresas.</li>
+            </ul>
+          </section>
+
+          <section class="mb-10" id="tecnologias">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Tecnologias Utilizadas</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li><strong>Flask (Python):</strong> Framework leve para desenvolvimento web.</li>
+              <li><strong>HTML/CSS:</strong> Estrutura e estilo da interface.</li>
+              <li><strong>JavaScript:</strong> Comunicação assíncrona com o backend (AJAX).</li>
+              <li><strong>Python (string e random):</strong> Para geração segura e personalizada de senhas.</li>
+            </ul>
+          </section>
+
+          <section class="mb-10" id="estrutura">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Estrutura</h3>
+            <pre class="bg-gray-100 rounded p-4 text-sm overflow-x-auto mb-4">
+├── README.md
+├── password_generator.py
+├── requirements.txt
+├── static
+│   └── script.js
+└── templates
+    └── index.html
+            </pre>
+          </section>
+
+          <section class="mb-10" id="ambiente">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Ambiente Virtual Python no Ubuntu</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li>Para criar um ambiente virtual: <code>python3 -m venv venv</code></li>
+              <li>Para ativar o ambiente: <code>source venv/bin/activate</code></li>
+              <li>Para instalar dependências: <code>pip install flask</code></li>
+              <li>Para criar um arquivo de dependências: <code>pip freeze > requirements.txt</code></li>
+            </ul>
+            <p class="mb-4">Após ativar no ambiente, o nome dele aparece entre parênteses no começo, aproveitei para verificar as versões do Python3 e pip3.</p>
+            <p class="mb-4">Com ambos instalados podemos começar com a estrutura do projeto.</p>
+            <p>Como vou usar Flask, é o que precisamos instalar, com <code>pip install flask</code>.</p>
+            <p class="mb-4">Para um pouco mais de segurança e profissionalismo, é bom criar o arquivo “requirements.txt”, ele armazena os “pré-requisitos” para executar o programa, desse modo, podemos “passar” para outra máquina e instalar essas dependências para que o programa possa ser executável, se enviar o programa com requirements.txt para o GitHub, quem baixar o programa pode executá-lo para que o programa funcione.</p>
+            <p><code>pip freeze</code> serve para verificar quais são essas dependências.<br>
+            Com o <code>&gt; requirements.txt</code> essas dependências são adicionadas no arquivo.</p>
+          </section>
+
+          <section class="mb-10" id="flask">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">O que é Flask?</h3>
+            <p class="mb-4"><strong>Flask é um framework de Python que serve para criar aplicações web.</strong></p>
+            <p class="mb-4">O Flask funciona como o “cérebro” por trás do site, responsável por organizar como as páginas funcionam, como o que acontece quando um botão é clicado e como os dados são processados.</p>
+            <p>Enquanto o <strong>HTML, CSS e JavaScript</strong> são o “visual” do site (o que o usuário interage), o Flask atua “por baixo dos panos”.</p>
+          </section>
+
+          <section class="mb-10" id="projeto">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">O Projeto</h3>
+            <p class="mb-4">Agora, com o ambiente e estrutura preparados, vamos para o código em si.</p>
+            <p class="mb-4">Esse é um <strong>formulário interativo</strong> que permite ao usuário <strong>gerar senhas seguras e personalizadas</strong> diretamente do navegador. Ele se conecta ao Flask, que gera a senha com base nas escolhas do usuário.</p>
+          </section>
+
+          <section class="mb-10" id="frontend">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Começando com HTML e CSS (Tailwind)</h3>
+            <ol class="list-decimal list-inside mb-4 space-y-1">
+              <li><strong>Cabeçalho (&lt;head&gt;):</strong> Importa o Tailwind CSS e define informações básicas da página, como o título.</li>
+              <li><strong>Corpo (&lt;body&gt;):</strong> Contém os elementos visuais que o usuário interage, principalmente o formulário, com campo para tamanho da senha, checkboxes e botão para gerar.</li>
+            </ol>
+          </section>
+
+          <section class="mb-10" id="javascript">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Avançando com o Javascript</h3>
+            <p class="mb-4">O script recebe o envio do formulário de geração de senhas, pega as opções marcadas pelo usuário, envia para o servidor Flask, impede o recarregamento da página, recebe a senha gerada e exibe na tela.</p>
+            <pre class="bg-gray-100 rounded p-4 text-sm overflow-x-auto mb-4">// Exemplo de uso com fetch e manipulação do DOM
+document.getElementById('password-form').addEventListener('submit', async function(event) {
+  event.preventDefault();
+  const length = parseInt(document.getElementById('length').value);
+  const includeUppercase = document.getElementById('include-uppercase').checked;
+  const includeNumbers = document.getElementById('include-numbers').checked;
+  const includeSpecialChars = document.getElementById('include-special-chars').checked;
+  const response = await fetch('/generate_password', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      length: length,
+      include_uppercase: includeUppercase,
+      include_numbers: includeNumbers,
+      include_special_chars: includeSpecialChars
+    }),
+  });
+  const result = await response.json();
+  document.getElementById('result').textContent = `Senha gerada: ${result.password}`;
+});
+            </pre>
+          </section>
+
+          <section class="mb-10" id="python">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Python / Backend (Flask)</h3>
+            <p class="mb-4">O backend é responsável por gerar a senha com base nas escolhas do usuário.</p>
+            <pre class="bg-gray-100 rounded p-4 text-sm overflow-x-auto mb-4">from flask import Flask, request, jsonify, render_template
+import random
+import string
+
+app = Flask(__name__)
+
+def generate_password(length=12, include_uppercase=True, include_numbers=True, include_special_chars=True):
+    characters = string.ascii_lowercase
+    if include_uppercase:
+        characters += string.ascii_uppercase
+    if include_numbers:
+        characters += string.digits
+    if include_special_chars:
+        characters += string.punctuation
+    password = ''.join(random.choice(characters) for _ in range(length))
+    return password
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/generate_password', methods=['POST'])
+def generate_password_endpoint():
+    data = request.json
+    length = data.get('length', 12)
+    include_uppercase = data.get('include_uppercase', True)
+    include_numbers = data.get('include_numbers', True)
+    include_special_chars = data.get('include_special_chars', True)
+    password = generate_password(length, include_uppercase, include_numbers, include_special_chars)
+    return jsonify({'password': password})
+
+if __name__ == '__main__':
+    app.run(debug=True)
+            </pre>
+            <p class="mb-4">No caso do Gerador de Senhas, o Flask funciona assim:</p>
+            <ol class="list-decimal list-inside mb-4 space-y-1">
+              <li>O usuário preenche o formulário no site.</li>
+              <li>O JavaScript pega essas informações.</li>
+              <li>O JavaScript envia essas informações para o Flask.</li>
+              <li>O Flask usa Python para gerar uma senha segura com base no que foi pedido.</li>
+              <li>O Flask devolve a senha pronta.</li>
+              <li>O JavaScript exibe a senha na tela do usuário.</li>
+            </ol>
+          </section>
+
+          <section class="mb-10" id="funcionalidades">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Funcionalidades</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li>Geração dinâmica de senhas: O backend gera uma nova senha a cada requisição.</li>
+              <li>Personalização: O usuário define o comprimento e os tipos de caracteres a incluir.</li>
+              <li>Interface amigável: O front-end é simples e direto.</li>
+            </ul>
+          </section>
+
+          <section class="mb-10" id="beneficios">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Benefícios da Aplicação</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li>Requisição assíncrona: Comunicação fluida entre frontend e backend, sem recarregar a página.</li>
+              <li>Segurança: Senhas aleatórias são menos vulneráveis a ataques como força bruta.</li>
+              <li>Usabilidade: Simples para usuários leigos.</li>
+            </ul>
+          </section>
+
+          <section class="mb-10" id="consideracoes">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Considerações sobre Segurança</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li>Evitar reutilização de senhas.</li>
+              <li>Utilizar autenticação multifator (MFA).</li>
+              <li>Armazenar senhas com hash (em sistemas internos).</li>
+              <li>Usar gerenciadores de senhas para organizar as credenciais.</li>
+            </ul>
+          </section>
+
+          <section class="mb-10" id="disclaimer">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Disclaimer</h3>
+            <p class="mb-4">
+              Este material foi elaborado para compartilhar conhecimento de forma gratuita e acessível. Sou um estudante, e todo o conteúdo aqui apresentado reflete meus estudos, interpretações e experiências pessoais durante minha jornada de aprendizado.
+            </p>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li>Este artigo não tem fins comerciais e não possui qualquer vínculo.</li>
+              <li>Todo o conteúdo foi desenvolvido de forma original, sem a intenção de reproduzir ou plagiar obras de terceiros.</li>
+              <li>Caso algum trecho coincida com materiais já existentes, trata-se de coincidência não intencional e estou aberto a revisar/corrigir/remover o conteúdo, se necessário.</li>
+              <li>As informações aqui contidas não substituem orientações profissionais ou consultorias especializadas em segurança da informação.</li>
+              <li>As ilustrações presentes neste material foram geradas com inteligência artificial ou são de fontes de imagens de uso livre, para tornar a leitura mais visual e didática.</li>
+            </ul>
+            <p>
+              Este material é parte do meu portfólio como estudante e tem como objetivo demonstrar habilidades, incentivar o aprendizado e colaborar com a comunidade.
+            </p>
+          </section>
+
+          <p class="text-center text-gray-400 mt-12">© 2025 CyberBlog</p>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>
