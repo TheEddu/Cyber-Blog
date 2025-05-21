@@ -10,45 +10,12 @@
   <body class="text-gray-800 font-sans bg-gray-50">
 
     <!-- Cabeçalho Profissional -->
-    <header class="bg-gray-900 flex items-center border-b border-gray-200 px-8 py-4 shadow-sm fixed top-0 left-0 right-0 z-30" style="height: 72px;">
-      <img src="../images/kaizen.jpg" alt="Logo Kaizen" class="w-12 h-12 rounded-lg mr-4 border border-green-400 shadow-sm" />
-      <div>
-        <h1 class="text-2xl font-bold text-green-600 tracking-tight">CyberBlog Relatórios</h1>
-        <span class="text-sm text-gray-500">Kaizen: Melhoria Contínua</span>
-      </div>
-      <button id="toggleMenu" class="lg:hidden p-2 absolute top-4 right-4 bg-gray-800 text-white rounded-md shadow">
-        <!-- Ícone -->
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </header>
+    <div id="header-container"></div>
 
     <!-- Layout principal com sidebar e conteúdo -->
     <div class="flex pt-24 bg-stone-300 min-h-screen">
-
       <!-- Sidebar / Sumário -->
-      <nav id="sidebar" class="bg-gray-900 w-72 min-w-[220px] max-w-xs border-r border-gray-200 px-6 py-8 fixed top-18 left-0 bottom-0 z-20 overflow-y-auto rounded-tr-2xl rounded-br-2xl shadow-md transition-transform transform lg:translate-x-0 -translate-x-full lg:block"
-           style="margin-top:72px; height:calc(100vh - 72px);">
-        <h2 class="text-lg font-semibold text-green-700 mb-4">Sumário</h2>
-        <ul class="space-y-3 text-gray-300 text-base">
-          <li><a href="#mudanca" class="hover:text-green-600 transition">Mudança para Melhor</a></li>
-          <li><a href="#ilusao" class="hover:text-green-600 transition">A Ilusão da Produtividade Instantânea</a></li>
-          <li><a href="#principios" class="hover:text-green-600 transition">Princípios Básicos</a></li>
-          <li><a href="#5s" class="hover:text-green-600 transition">5S</a></li>
-          <li><a href="#aplicar" class="hover:text-green-600 transition">Como Aplicar o Kaizen</a></li>
-          <li><a href="#ti" class="hover:text-green-600 transition">Por que TI Precisa de Melhoria Contínua?</a></li>
-          <li><a href="#pratica" class="hover:text-green-600 transition">Kaizen na Prática Profissional</a></li>
-          <li><a href="#relacao" class="hover:text-green-600 transition">Kaizen, Scrum, Kanban e Six Sigma</a></li>
-          <li><a href="#poder" class="hover:text-green-600 transition">O Poder das Pequenas Mudanças</a></li>
-          <li><a href="#referencias" class="hover:text-green-600 transition">Referências</a></li>
-          <li><a href="#disclaimer" class="hover:text-green-600 transition">Disclaimer</a></li>
-        </ul>
-        <div class="mt-10 text-xs text-gray-400">
-          <a href="../index.html" class="hover:underline text-green-500">← Voltar para a página inicial</a>
-        </div>
-      </nav>
+      <div id="sidebar-container"></div>
 
       <!-- Conteúdo do artigo -->
       <main class="flex-1 mx-auto max-w-3xl bg-white rounded-2xl shadow-xl px-10 py-12 mb-12 mt-0 border border-gray-200"
@@ -209,37 +176,50 @@
             <img src="../images/kaizen/image5.jpg" alt="Pequenas Mudanças" class="rounded-xl shadow-md mx-auto my-6 w-full max-w-md" />
           </section>
 
-          <section class="mb-10" id="referencias">
-            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Referências</h3>
-            <ul class="list-disc list-inside mb-4 space-y-1 text-sm">
-              <li>AEVO. O que é Kaizen? Disponível em: <a href="https://blog.aevo.com.br/kaizen/" class="text-green-600 hover:underline" target="_blank">https://blog.aevo.com.br/kaizen/</a>. Acesso em: 6 maio 2025.</li>
-              <li>ARATA, Seiiti. <strong>KAIZEN: melhoria contínua</strong> [Vídeo]. YouTube, 2022. Disponível em: <a href="https://youtu.be/GQiLb6AYOXw?si=1HbyO_xHFyxRpHku" class="text-green-600 hover:underline" target="_blank">https://youtu.be/GQiLb6AYOXw?si=1HbyO_xHFyxRpHku</a>. Acesso em: 6 maio 2025.</li>
-              <li>LOGSMART BRASIL. O que é Kaizen e como aplicar os 5 princípios. Disponível em: <a href="https://logsmartbrasil.com.br/2024/08/22/o-que-e-kaizen/" class="text-green-600 hover:underline" target="_blank">https://logsmartbrasil.com.br/2024/08/22/o-que-e-kaizen/</a>. Acesso em: 6 maio 2025.</li>
-              <li>5S O QUE É (Conheça a Metodologia da QUALIDADE TOTAL) [Vídeo]. YouTube, 2022. Disponível em: <a href="https://youtu.be/FgHXoMfYCbo?si=P4opYpx7foDpeR3E" class="text-green-600 hover:underline" target="_blank">https://youtu.be/FgHXoMfYCbo?si=P4opYpx7foDpeR3E</a>. Acesso em: 6 maio 2025.</li>
-            </ul>
-          </section>
-
-          <section class="mb-10" id="disclaimer">
-            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Disclaimer</h3>
-            <p class="mb-4">
-              Este material foi elaborado para compartilhar conhecimento de forma gratuita e acessível. Sou um estudante, e todo o conteúdo aqui apresentado reflete meus estudos, interpretações e experiências pessoais durante minha jornada de aprendizado.
-            </p>
-            <ul class="list-disc list-inside mb-4 space-y-1">
-              <li>Este artigo não tem fins comerciais e não possui qualquer vínculo.</li>
-              <li>Todo o conteúdo foi desenvolvido de forma original, sem a intenção de reproduzir ou plagiar obras de terceiros.</li>
-              <li>Caso algum trecho coincida com materiais já existentes, trata-se de coincidência não intencional e estou aberto a revisar/corrigir/remover o conteúdo, se necessário.</li>
-              <li>As informações aqui contidas não substituem orientações profissionais ou consultorias especializadas em segurança da informação.</li>
-              <li>As ilustrações presentes neste material foram geradas por inteligência artificial ou obtidas de fontes de imagens de uso livre, com o objetivo de tornar a leitura mais visual e didática. Elas não representam pessoas, obras reais ou eventos específicos, não possuem fins comerciais e são utilizadas exclusivamente como recurso ilustrativo e complementar ao conteúdo educativo.</li>
-            </ul>
-            <p>
-              Este material é parte do meu portfólio como estudante e tem como objetivo demonstrar habilidades, incentivar o aprendizado e colaborar com a comunidade.
-            </p>
-          </section>
+          <div id="references-container"></div>
+          <div id="disclaimer"></div>
 
           <p class="text-center text-gray-400 mt-12">© 2025 CyberBlog</p>
         </article>
       </main>
     </div>
     <script src="../scripts/menu.js"></script>
+    <script type="module">
+      import { renderHeader, renderSidebar, renderReferences } from '../scripts/components.js';
+      const pageData = {
+        header: {
+          image: '../images/kaizen.jpg',
+          alt: 'Logo Kaizen',
+          title: 'CyberBlog Relatórios',
+          subtitle: 'Kaizen: Melhoria Contínua'
+        },
+        summary: [
+          { id: 'mudanca', label: 'Mudança para Melhor' },
+          { id: 'ilusao', label: 'A Ilusão da Produtividade Instantânea' },
+          { id: 'principios', label: 'Princípios Básicos' },
+          { id: '5s', label: '5S' },
+          { id: 'aplicar', label: 'Como Aplicar o Kaizen' },
+          { id: 'ti', label: 'Por que TI Precisa de Melhoria Contínua?' },
+          { id: 'pratica', label: 'Kaizen na Prática Profissional' },
+          { id: 'relacao', label: 'Kaizen, Scrum, Kanban e Six Sigma' },
+          { id: 'poder', label: 'O Poder das Pequenas Mudanças' },
+          { id: 'referencias', label: 'Referências' },
+          { id: 'disclaimer', label: 'Disclaimer' }
+        ],
+        backLink: '../index.html',
+        references: [
+          { text: 'AEVO. O que é Kaizen?', url: 'https://blog.aevo.com.br/kaizen/' },
+          { text: 'ARATA, Seiiti. KAIZEN: melhoria contínua [Vídeo]. YouTube, 2022.', url: 'https://youtu.be/GQiLb6AYOXw?si=1HbyO_xHFyxRpHku' },
+          { text: 'LOGSMART BRASIL. O que é Kaizen e como aplicar os 5 princípios.', url: 'https://logsmartbrasil.com.br/2024/08/22/o-que-e-kaizen/' },
+          { text: '5S O QUE É (Conheça a Metodologia da QUALIDADE TOTAL) [Vídeo]. YouTube, 2022.', url: 'https://youtu.be/FgHXoMfYCbo?si=P4opYpx7foDpeR3E' }
+        ]
+      };
+      document.getElementById('header-container').innerHTML = renderHeader(pageData.header);
+      document.getElementById('sidebar-container').innerHTML = renderSidebar({ summary: pageData.summary, backLink: pageData.backLink });
+      document.getElementById('references-container').innerHTML = renderReferences({ references: pageData.references });
+      fetch('../components/disclaimer.html').then(r => r.text()).then(html => {
+        document.getElementById('disclaimer').innerHTML = html;
+      });
+    </script>
   </body>
 </html>

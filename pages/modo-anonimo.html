@@ -9,48 +9,18 @@
   </head>
   <body class="text-gray-800 font-sans bg-gray-50">
     <!-- Cabeçalho Profissional -->
-    <header class="bg-gray-900 flex items-center border-b border-gray-200 px-8 py-4 shadow-sm fixed top-0 left-0 right-0 z-30" style="height: 72px;">
-      <div>
-        <h1 class="text-2xl font-bold text-green-600 tracking-tight">CyberBlog Relatórios</h1>
-        <span class="text-sm text-gray-500">Modo Anônimo</span>
-      </div>
-      <button id="toggleMenu" class="lg:hidden p-2 absolute top-4 right-4 bg-gray-800 text-white rounded-md shadow">
-        <!-- Ícone -->
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </header>
+    <div id="header-container"></div>
 
     <div class="flex pt-24 bg-stone-300 min-h-screen">
       <!-- Sidebar / Sumário -->
-      <nav id="sidebar" class="bg-gray-900 w-72 min-w-[220px] max-w-xs border-r border-gray-200 px-6 py-8 fixed top-18 left-0 bottom-0 z-20 overflow-y-auto rounded-tr-2xl rounded-br-2xl shadow-md transition-transform transform lg:translate-x-0 -translate-x-full lg:block"
-           style="margin-top:72px; height:calc(100vh - 72px);">
-        <h2 class="text-lg font-semibold text-green-700 mb-4">Sumário</h2>
-        <ul class="space-y-3 text-gray-300 text-base">
-          <li><a href="#intro" class="hover:text-green-600 transition">Você Realmente Está Invisível?</a></li>
-          <li><a href="#oque" class="hover:text-green-600 transition">O que é o Modo Anônimo?</a></li>
-          <li><a href="#naofaz" class="hover:text-green-600 transition">O que o modo anônimo NÃO faz?</a></li>
-          <li><a href="#utilidade" class="hover:text-green-600 transition">Quando é útil?</a></li>
-          <li><a href="#google" class="hover:text-green-600 transition">O que o Google diz?</a></li>
-          <li><a href="#riscos" class="hover:text-green-600 transition">Riscos em Redes Públicas</a></li>
-          <li><a href="#privacidade" class="hover:text-green-600 transition">Privacidade x Anonimato</a></li>
-          <li><a href="#conclusao" class="hover:text-green-600 transition">Conclusão</a></li>
-          <li><a href="#referencias" class="hover:text-green-600 transition">Referências</a></li>
-          <li><a href="#disclaimer" class="hover:text-green-600 transition">Disclaimer</a></li>
-        </ul>
-        <div class="mt-10 text-xs text-gray-400">
-          <a href="../index.html" class="hover:underline text-green-500">← Voltar para a página inicial</a>
-        </div>
-      </nav>
+      <div id="sidebar-container"></div>
 
       <!-- Conteúdo do artigo -->
       <main class="flex-1 mx-auto max-w-3xl bg-white rounded-2xl shadow-xl px-10 py-12 mb-12 mt-0 border border-gray-200"
             style="min-height:calc(100vh - 96px);">
         <article>
           <h2 class="text-3xl font-bold text-grey-700 mb-2">Modo Anônimo: Você Realmente Está Invisível?</h2>
-          <p class="text-sm text-gray-500 mb-8">Publicado em 2025</p>
+          <p class="text-sm text-gray-500 mb-8">Publicado em maio de 2025</p>
 
           <section class="mb-10" id="intro">
             <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Você Realmente Está Invisível?</h3>
@@ -211,37 +181,49 @@
             </p>
           </section>
 
-          <section class="mb-10" id="referencias">
-            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Referências</h3>
-            <ul class="list-disc list-inside mb-4 space-y-1 text-sm">
-              <li>Keeper Security. (2024, novembro 22). <em>How does Incognito mode work?</em> <a href="https://www.keepersecurity.com/blog/pt-br/2024/11/22/how-does-incognito-mode-work/" class="text-green-600 hover:underline" target="_blank">https://www.keepersecurity.com/blog/pt-br/2024/11/22/how-does-incognito-mode-work/</a></li>
-              <li>Malwarebytes. <em>Incognito Mode</em>. <a href="https://www.malwarebytes.com/pt-br/incognito-mode" class="text-green-600 hover:underline" target="_blank">https://www.malwarebytes.com/pt-br/incognito-mode</a></li>
-              <li>NordVPN. <em>Como navegar anônimo</em>. <a href="https://nordvpn.com/pt-br/blog/como-navegar-anonimo/" class="text-green-600 hover:underline" target="_blank">https://nordvpn.com/pt-br/blog/como-navegar-anonimo/</a></li>
-              <li>StaySafeOnline. <em>Safeguarding your internet activity with Incognito mode</em>. <a href="https://www.staysafeonline.org/articles/safeguarding-your-internet-activity-with-incognito-mode" class="text-green-600 hover:underline" target="_blank">https://www.staysafeonline.org/articles/safeguarding-your-internet-activity-with-incognito-mode</a></li>
-            </ul>
-          </section>
-
-          <section class="mb-10" id="disclaimer">
-            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Disclaimer</h3>
-            <p class="mb-4">
-              Este material foi elaborado para compartilhar conhecimento de forma gratuita e acessível. Sou um estudante, e todo o conteúdo aqui apresentado reflete meus estudos, interpretações e experiências pessoais durante minha jornada de aprendizado.
-            </p>
-            <ul class="list-disc list-inside mb-4 space-y-1">
-              <li>Este artigo não tem fins comerciais e não possui qualquer vínculo.</li>
-              <li>Todo o conteúdo foi desenvolvido de forma original, sem a intenção de reproduzir ou plagiar obras de terceiros.</li>
-              <li>Caso algum trecho coincida com materiais já existentes, trata-se de coincidência não intencional e estou aberto a revisar/corrigir/remover o conteúdo, se necessário.</li>
-              <li>As informações aqui contidas não substituem orientações profissionais ou consultorias especializadas em segurança da informação.</li>
-              <li>As ilustrações presentes neste material foram geradas por inteligência artificial ou obtidas de fontes de imagens de uso livre, com o objetivo de tornar a leitura mais visual e didática. Elas não representam pessoas, obras reais ou eventos específicos, não possuem fins comerciais e são utilizadas exclusivamente como recurso ilustrativo e complementar ao conteúdo educativo.</li>
-            </ul>
-            <p>
-              Este material é parte do meu portfólio como estudante e tem como objetivo demonstrar habilidades, incentivar o aprendizado e colaborar com a comunidade.
-            </p>
-          </section>
+          <div id="references-container"></div>
+          <div id="disclaimer"></div>
 
           <p class="text-center text-gray-400 mt-12">© 2025 CyberBlog</p>
         </article>
       </main>
     </div>
     <script src="../scripts/menu.js"></script>
+    <script type="module">
+      import { renderHeader, renderSidebar, renderReferences } from '../scripts/components.js';
+      const pageData = {
+        header: {
+          image: '../images/modoAnonimo.jpg',
+          alt: 'Logo Modo Anonimo',
+          title: 'CyberBlog Relatórios',
+          subtitle: 'Modo Anônimo'
+        },
+        summary: [
+          { id: 'intro', label: 'Você Realmente Está Invisível?' },
+          { id: 'oque', label: 'O que é o Modo Anônimo?' },
+          { id: 'naofaz', label: 'O que o modo anônimo NÃO faz?' },
+          { id: 'utilidade', label: 'Quando é útil?' },
+          { id: 'google', label: 'O que o Google diz?' },
+          { id: 'riscos', label: 'Riscos em Redes Públicas' },
+          { id: 'privacidade', label: 'Privacidade x Anonimato' },
+          { id: 'conclusao', label: 'Conclusão' },
+          { id: 'referencias', label: 'Referências' },
+          { id: 'disclaimer', label: 'Disclaimer' }
+        ],
+        backLink: '../index.html',
+        references: [
+          { text: 'Keeper Security. (2024, novembro 22). How does Incognito mode work?', url: 'https://www.keepersecurity.com/blog/pt-br/2024/11/22/how-does-incognito-mode-work/' },
+          { text: 'Malwarebytes. Incognito Mode.', url: 'https://www.malwarebytes.com/pt-br/incognito-mode' },
+          { text: 'NordVPN. Como navegar anônimo.', url: 'https://nordvpn.com/pt-br/blog/como-navegar-anonimo/' },
+          { text: 'StaySafeOnline. Safeguarding your internet activity with Incognito mode.', url: 'https://www.staysafeonline.org/articles/safeguarding-your-internet-activity-with-incognito-mode' }
+        ]
+      };
+      document.getElementById('header-container').innerHTML = renderHeader(pageData.header);
+      document.getElementById('sidebar-container').innerHTML = renderSidebar({ summary: pageData.summary, backLink: pageData.backLink });
+      document.getElementById('references-container').innerHTML = renderReferences({ references: pageData.references });
+      fetch('../components/disclaimer.html').then(r => r.text()).then(html => {
+        document.getElementById('disclaimer').innerHTML = html;
+      });
+    </script>
   </body>
 </html>
