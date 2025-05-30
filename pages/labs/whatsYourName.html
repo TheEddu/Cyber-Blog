@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whats Your Name: Enumeração de Subdomínios e Exploração Web | CyberBlog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../styles/style.css" />
+  </head>
+  <body class="text-gray-800 font-sans bg-gray-50">
+    <div id="header-container"></div>
+    <div class="flex pt-24 bg-stone-300 min-h-screen">
+      <div id="sidebar-container"></div>
+      <main class="flex-1 mx-auto max-w-3xl bg-white rounded-2xl shadow-2xl px-10 py-12 mb-12 mt-0 border border-gray-200" style="min-height:calc(100vh - 96px);">
+        <article>
+          <h2 class="text-3xl font-bold text-green-700 mb-2">Enumeração de Subdomínios e Exploração Web: Lições do Lab "Whats Your Name?"</h2>
+          <p class="text-sm text-gray-500 mb-8">Publicado em 2025</p>
+          <section class="mb-10" id="introducao">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Introdução</h3>
+            <p class="mb-4">
+              O lab "Whats Your Name?" do TryHackMe explora técnicas essenciais de enumeração de subdomínios, reconhecimento de aplicações web e exploração de vulnerabilidades como XSS. O desafio simula um ambiente realista, exigindo raciocínio lógico, atenção a detalhes e domínio de ferramentas de pentest.
+            </p>
+          </section>
+          <section class="mb-10" id="desafio">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">O Desafio</h3>
+            <p class="mb-4">
+              O objetivo do lab é mapear a superfície de ataque de um alvo, identificar subdomínios e serviços disponíveis, explorar funcionalidades web e capturar flags de diferentes níveis de acesso (admin, moderador).
+            </p>
+          </section>
+          <section class="mb-10" id="raciocinio">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Raciocínio e Abordagem</h3>
+            <p class="mb-4">
+              A resolução do lab começou pela preparação do ambiente, adicionando o IP da máquina alvo ao arquivo <code>/etc/hosts</code> para garantir a resolução correta dos subdomínios. Em seguida, realizei uma varredura com Nmap para identificar portas e serviços expostos, revelando o serviço web, o que direcionou o foco inicial para a análise da aplicação web.
+            </p>
+            <p class="mb-4">
+              A página de registro foi o primeiro ponto de interação. Ao preencher o formulário, uma mensagem de sucesso revelou um subdomínio adicional, que também foi adicionado ao hosts. Esse tipo de pista é comum em ambientes reais, onde mensagens, redirecionamentos ou respostas HTTP podem indicar a existência de outros serviços ou subdomínios.
+            </p>
+            <p class="mb-4">
+              A partir daí, o reconhecimento incluiu inspeção detalhada do código-fonte das páginas, procurando por comentários, referências a arquivos e endpoints ocultos. Ferramentas como Gobuster foram utilizadas para enumerar arquivos e diretórios, o que levou à descoberta de arquivos sensíveis e credenciais. Esse processo de enumeração é iterativo: cada nova informação encontrada pode abrir portas para novas tentativas, como acessar painéis de login ou testar credenciais em diferentes endpoints.
+            </p>
+            <p class="mb-4">
+              Com as credenciais em mãos, foi possível acessar o painel de administrador. Mas, para obter acesso ao painel de moderador, foi necessário explorar uma vulnerabilidade de XSS. Isso envolveu identificar campos vulneráveis à injeção de scripts, criar um payload para exfiltrar cookies de sessão e, posteriormente, manipular esses cookies no navegador para escalar privilégios. O uso das DevTools do navegador foi essencial para alterar cookies e simular a sessão de um usuário privilegiado.
+            </p>
+          </section>
+          <section class="mb-10" id="ferramentas">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Ferramentas, Técnicas e Conceitos Aplicados</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li><strong>Nmap:</strong> Enumeração de portas e serviços.</li>
+              <li><strong>/etc/hosts:</strong> Resolução de subdomínios locais.</li>
+              <li><strong>Gobuster:</strong> Enumeração de diretórios e arquivos ocultos.</li>
+              <li><strong>Reconhecimento web:</strong> Análise de código-fonte, comentários e arquivos como <code>login.php</code>.</li>
+              <li><strong>XSS (Cross-Site Scripting):</strong> Injeção de scripts para exfiltrar cookies e manipular sessões.</li>
+              <li><strong>DevTools:</strong> Manipulação de cookies e sessões no navegador.</li>
+            </ul>
+          </section>
+          <section class="mb-10" id="problema">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Descrição do Problema</h3>
+            <p class="mb-4">
+              O principal desafio foi identificar subdomínios ocultos e arquivos sensíveis, além de explorar funcionalidades web vulneráveis. A obtenção da flag de moderador precisou de certa criatividade.
+            </p>
+          </section>
+          <section class="mb-10" id="aplicacao">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Aplicação no Mundo Real</h3>
+            <p class="mb-4">
+              Enumeração de subdomínios é fundamental para mapear a superfície de ataque de organizações. Vulnerabilidades como XSS são comuns em aplicações web e podem ser exploradas para escalada de privilégios e roubo de sessões. O uso de ferramentas como Gobuster e Nmap é rotina em pentests profissionais.
+            </p>
+          </section>
+          <section class="mb-10" id="solucao">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Solução Encontrada</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li>Configuração do ambiente e enumeração de subdomínios.</li>
+              <li>Varredura de serviços com Nmap.</li>
+              <li>Enumeração de arquivos com Gobuster.</li>
+              <li>Descoberta e uso de credenciais para login.</li>
+              <li>Exploração de XSS para capturar cookies e manipular sessões.</li>
+              <li>Acesso a painéis restritos e captura das flags.</li>
+            </ul>
+          </section>
+          <section class="mb-10" id="generalizacao">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Generalização do Conhecimento</h3>
+            <p class="mb-4">
+              A enumeração detalhada de subdomínios e arquivos é uma das primeiras etapas em qualquer pentest web, pois permite identificar pontos de entrada não documentados e potenciais vulnerabilidades. A análise minuciosa de código-fonte, respostas HTTP e mensagens do sistema pode revelar informações valiosas, como credenciais, endpoints ocultos e funcionalidades não documentadas.
+            </p>
+            <p class="mb-4">
+              A exploração de XSS, por sua vez, é uma habilidade importantissima. Saber identificar campos vulneráveis, criar payloads eficazes e manipular sessões são competências que se traduzem diretamente em avaliações de aplicações reais, onde o roubo de sessões pode levar à escalada de privilégios e comprometimento de dados sensíveis.
+            </p>
+          </section>
+          <section class="mb-10" id="reflexao">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Reflexão e Recomendações</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li>Realizar reconhecimento detalhado, incluindo subdomínios e arquivos ocultos.</li>
+              <li>Analisar cuidadosamente código-fonte e mensagens de sistema.</li>
+              <li>Testar funcionalidades web para vulnerabilidades como XSS.</li>
+              <li>Utilizar ferramentas de automação para acelerar o processo de enumeração.</li>
+              <li>Praticar manipulação de sessões e cookies para entender riscos reais.</li>
+            </ul>
+          </section>
+          <div id="references-container"></div>
+          <div id="disclaimer"></div>
+          <p class="text-center text-gray-400 mt-12">© 2025 CyberBlog</p>
+        </article>
+      </main>
+    </div>
+    <script src="../../scripts/menu.js"></script>
+    <script type="module">
+      import { renderHeader, renderSidebar, renderReferences } from '../../scripts/components.js';
+      const pageData = {
+        header: {
+          title: 'CyberBlog Labs',
+          subtitle: 'Whats Your Name'
+        },
+        summary: [
+          { id: 'introducao', label: 'Introdução' },
+          { id: 'desafio', label: 'O Desafio' },
+          { id: 'raciocinio', label: 'Raciocínio e Abordagem' },
+          { id: 'ferramentas', label: 'Ferramentas e Técnicas' },
+          { id: 'problema', label: 'Descrição do Problema' },
+          { id: 'aplicacao', label: 'Aplicação no Mundo Real' },
+          { id: 'solucao', label: 'Solução Encontrada' },
+          { id: 'generalizacao', label: 'Generalização do Conhecimento' },
+          { id: 'reflexao', label: 'Reflexão e Recomendações' },
+          { id: 'referencias', label: 'Referências' },
+        ],
+        backLink: '../../index.html',
+        references: [
+          { text: 'TryHackMe - Whats Your Name?', url: 'https://tryhackme.com/room/whatsyourname' }
+        ]
+      };
+      document.getElementById('header-container').innerHTML = renderHeader(pageData.header);
+      document.getElementById('sidebar-container').innerHTML = renderSidebar({ summary: pageData.summary, backLink: pageData.backLink });
+      document.getElementById('references-container').innerHTML = renderReferences({ references: pageData.references });
+      fetch('../../components/disclaimer.html').then(r => r.text()).then(html => {
+      });
+    </script>
+  </body>
+</html>

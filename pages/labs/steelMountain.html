@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steel Mountain: Exploração de Ambientes Windows e Escalonamento de Privilégios | CyberBlog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../styles/style.css" />
+  </head>
+  <body class="text-gray-800 font-sans bg-gray-50">
+    <div id="header-container"></div>
+    <div class="flex pt-24 bg-stone-300 min-h-screen">
+      <div id="sidebar-container"></div>
+      <main class="flex-1 mx-auto max-w-3xl bg-white rounded-2xl shadow-2xl px-10 py-12 mb-12 mt-0 border border-gray-200" style="min-height:calc(100vh - 96px);">
+        <article>
+          <h2 class="text-3xl font-bold text-green-700 mb-2">Exploração de Ambientes Windows e Escalonamento de Privilégios: Lições do Lab "Steel Mountain"</h2>
+          <p class="text-sm text-gray-500 mb-8">Publicado em 2025</p>
+          <section class="mb-10" id="introducao">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Introdução</h3>
+            <p class="mb-4">
+              O lab "Steel Mountain" do TryHackMe simula um ambiente Windows corporativo vulnerável, desafiando o participante a realizar reconhecimento, exploração remota com Metasploit, pós-exploração com PowerShell e escalonamento de privilégios até o nível de administrador.
+            </p>
+          </section>
+          <section class="mb-10" id="desafio">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">O Desafio</h3>
+            <p class="mb-4">
+              O desafio consiste em identificar serviços vulneráveis, explorar um file server, obter acesso via Meterpreter, escalar privilégios com PowerShell e coletar flags de usuário e administrador.
+            </p>
+          </section>
+          <section class="mb-10" id="raciocinio">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Raciocínio e Abordagem</h3>
+            <p class="mb-4">
+              A resolução do lab exigiu uma abordagem bem estruturada, começando pelo reconhecimento do ambiente. O primeiro passo foi a enumeração de portas e serviços com Nmap, que revelou não apenas as portas abertas, mas também informações sobre os serviços em execução. A análise visual da página inicial, que exibia uma imagem que forneceu pistas, demonstrando a importância de observar detalhes aparentemente triviais.
+            </p>
+            <p class="mb-4">
+              Com as informações iniciais, o próximo passo foi identificar um file server vulnerável. A busca por exploits conhecidos foi realizada utilizando o Exploit-DB e o Metasploit, ferramentas essenciais para pentesters. A escolha do exploit para obter de uma shell para iniciar a fase de pós-exploração.
+            </p>
+            <p class="mb-4">
+              Na pós-exploração, o foco foi identificar vulnerabilidades locais que permitissem a escalada de privilégios. O script PowerUp.ps1 foi utilizado para automatizar a enumeração de possíveis vetores de escalada, como serviços mal configurados ou permissões inadequadas. A análise dos resultados do PowerUp.ps1 exigiu atenção para identificar o serviço vulnerável correto.
+            </p>
+            <p class="mb-4">
+              A geração de um payload reverso com MSFvenom e a execução do mesmo após interromper e reiniciar o serviço vulnerável serviram para obter acesso como administrador. O uso do Netcat para escutar conexões reversas e a navegação até o diretório Desktop do Administrator permitiram a coleta da flag root.
+            </p>
+          </section>
+          <section class="mb-10" id="ferramentas">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Ferramentas, Técnicas e Conceitos Aplicados</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li><strong>Nmap:</strong> Enumeração de portas e serviços.</li>
+              <li><strong>Metasploit:</strong> Exploração automatizada de vulnerabilidades.</li>
+              <li><strong>PowerShell & PowerUp.ps1:</strong> Enumeração e exploração de vulnerabilidades locais.</li>
+              <li><strong>MSFvenom:</strong> Geração de payloads reversos.</li>
+              <li><strong>Netcat:</strong> Escuta de conexões reversas.</li>
+              <li><strong>Reconhecimento visual:</strong> Análise de pistas em imagens e código-fonte.</li>
+            </ul>
+          </section>
+          <section class="mb-10" id="problema">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Descrição do Problema</h3>
+            <p class="mb-4">
+              O principal desafio foi identificar o serviço vulnerável, explorar a máquina remotamente e escalar privilégios em um ambiente Windows. A integração de diferentes ferramentas e técnicas foi essencial para o sucesso.
+            </p>
+          </section>
+          <section class="mb-10" id="solucao">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Solução Encontrada</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li>Enumeração de serviços e identificação de pistas.</li>
+              <li>Exploração do file server com Metasploit.</li>
+              <li>Pós-exploração com PowerUp.ps1 para identificar vulnerabilidades.</li>
+              <li>Geração e execução de payload reverso para escalada de privilégios.</li>
+              <li>Coleta das flags de usuário e administrador.</li>
+            </ul>
+          </section>
+          <section class="mb-10" id="generalizacao">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Generalização do Conhecimento</h3>
+            <p class="mb-4">
+              As técnicas aplicadas neste lab são essenciais para profissionais que atuam em ambientes Windows. O domínio de ferramentas como Metasploit, PowerShell e MSFvenom é fundamental para avaliações de segurança eficazes.
+            </p>
+            <p class="mb-4">
+              No mundo real, ambientes Windows corporativos frequentemente apresentam serviços expostos e configurações inadequadas que podem ser exploradas por atacantes. A capacidade de identificar e explorar vulnerabilidades em serviços, escalar privilégios e manter o acesso são habilidades críticas para pentesters e red teams. O uso de scripts de automação, como PowerUp.ps1, acelera o processo de identificação de vetores de escalada, enquanto ferramentas como Netcat e MSFvenom facilitam a obtenção e manutenção de shells reversos.
+            </p>
+            <p class="mb-4">
+              Além disso, a integração de diferentes técnicas e ferramentas deve ser sempre acompanhada de raciocínio lógico e atenção a detalhes.
+            </p>
+          </section>
+          <section class="mb-10" id="reflexao">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Reflexão e Recomendações</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li>Realizar reconhecimento detalhado e análise de pistas.</li>
+              <li>Utilizar ferramentas para exploração e pós-exploração.</li>
+              <li>Praticar a integração de diferentes técnicas para escalar privilégios.</li>
+              <li>Manter sistemas atualizados e bem configurados para evitar explorações conhecidas.</li>
+            </ul>
+          </section>
+          <div id="references-container"></div>
+          <div id="disclaimer"></div>
+          <p class="text-center text-gray-400 mt-12">© 2025 CyberBlog</p>
+        </article>
+      </main>
+    </div>
+    <script src="../../scripts/menu.js"></script>
+    <script type="module">
+      import { renderHeader, renderSidebar, renderReferences } from '../../scripts/components.js';
+      const pageData = {
+        header: {
+          title: 'CyberBlog Labs',
+          subtitle: 'Steel Mountain'
+        },
+        summary: [
+          { id: 'introducao', label: 'Introdução' },
+          { id: 'desafio', label: 'O Desafio' },
+          { id: 'raciocinio', label: 'Raciocínio e Abordagem' },
+          { id: 'ferramentas', label: 'Ferramentas e Técnicas' },
+          { id: 'problema', label: 'Descrição do Problema' },
+          { id: 'solucao', label: 'Solução Encontrada' },
+          { id: 'generalizacao', label: 'Generalização do Conhecimento' },
+          { id: 'reflexao', label: 'Reflexão e Recomendações' },
+          { id: 'referencias', label: 'Referências' },
+        ],
+        backLink: '../../index.html',
+        references: [
+          { text: 'TryHackMe - Steel Mountain', url: 'https://tryhackme.com/room/steelmountain' }
+        ]
+      };
+      document.getElementById('header-container').innerHTML = renderHeader(pageData.header);
+      document.getElementById('sidebar-container').innerHTML = renderSidebar({ summary: pageData.summary, backLink: pageData.backLink });
+      document.getElementById('references-container').innerHTML = renderReferences({ references: pageData.references });
+      fetch('../../components/disclaimer.html').then(r => r.text()).then(html => {
+      });
+    </script>
+  </body>
+</html>

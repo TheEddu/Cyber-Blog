@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kenobi: Enumeração e Escalonamento de Privilégios em Linux | CyberBlog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../styles/style.css" />
+  </head>
+  <body class="text-gray-800 font-sans bg-gray-50">
+    <div id="header-container"></div>
+    <div class="flex pt-24 bg-stone-300 min-h-screen">
+      <div id="sidebar-container"></div>
+      <main class="flex-1 mx-auto max-w-3xl bg-white rounded-2xl shadow-2xl px-10 py-12 mb-12 mt-0 border border-gray-200" style="min-height:calc(100vh - 96px);">
+        <article>
+          <h2 class="text-3xl font-bold text-green-700 mb-2">Kenobi: Enumeração e Escalonamento de Privilégios em Linux</h2>
+          <p class="text-sm text-gray-500 mb-8">Publicado em 2025</p>
+          <section class="mb-10" id="introducao">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Introdução</h3>
+            <p class="mb-4">
+              O lab Kenobi do TryHackMe simula um ambiente Linux vulnerável, focando em enumeração de serviços, exploração de falhas em Samba, NFS e escalonamento de privilégios. O objetivo é obter acesso root através de técnicas clássicas de pentest.
+            </p>
+          </section>
+          <section class="mb-10" id="desafio">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">O Desafio</h3>
+            <p class="mb-4">
+              O desafio envolve identificar serviços expostos, explorar compartilhamentos de arquivos, obter credenciais e escalar privilégios para capturar as flags de usuário e root.
+            </p>
+          </section>
+          <section class="mb-10" id="raciocinio">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Raciocínio e Abordagem</h3>
+            <p class="mb-4">
+              A abordagem começa com varredura de portas (Nmap), identificação de serviços como Samba e NFS, enumeração de compartilhamentos, montagem de diretórios remotos e análise de arquivos sensíveis. Após obter credenciais, o acesso SSH é conquistado e, por fim, técnicas de escalonamento de privilégios são aplicadas para obter root.
+            </p>
+          </section>
+          <section class="mb-10" id="ferramentas">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Ferramentas e Técnicas</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li><strong>Nmap:</strong> Enumeração de portas e serviços.</li>
+              <li><strong>Enumeração de Samba/NFS:</strong> Enum4linux, smbclient, mount.</li>
+              <li><strong>SSH:</strong> Acesso remoto ao sistema.</li>
+              <li><strong>Escalonamento de privilégios:</strong> Exploração de arquivos SUID e permissões incorretas.</li>
+            </ul>
+          </section>
+          <section class="mb-10" id="aplicacao">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Aplicação no Mundo Real</h3>
+            <p class="mb-4">
+              O lab Kenobi ilustra vulnerabilidades comuns em ambientes Linux, como compartilhamentos inseguros e arquivos SUID. A enumeração detalhada e o uso de ferramentas clássicas são essenciais em pentests reais.
+            </p>
+          </section>
+          <section class="mb-10" id="reflexao">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Reflexão</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li>Enumere todos os serviços e compartilhamentos.</li>
+              <li>Analise permissões e arquivos SUID.</li>
+              <li>Utilize ferramentas automatizadas para acelerar o processo.</li>
+              <li>Pratique escalonamento de privilégios em ambientes controlados.</li>
+            </ul>
+          </section>
+          <div id="references-container"></div>
+          <div id="disclaimer"></div>
+          <p class="text-center text-gray-400 mt-12">© 2025 CyberBlog</p>
+        </article>
+      </main>
+    </div>
+    <script src="../../scripts/menu.js"></script>
+    <script type="module">
+      import { renderHeader, renderSidebar, renderReferences } from '../../scripts/components.js';
+      const pageData = {
+        header: {
+          title: 'CyberBlog Labs',
+          subtitle: 'Kenobi'
+        },
+        summary: [
+          { id: 'introducao', label: 'Introdução' },
+          { id: 'desafio', label: 'O Desafio' },
+          { id: 'raciocinio', label: 'Raciocínio e Abordagem' },
+          { id: 'ferramentas', label: 'Ferramentas e Técnicas' },
+          { id: 'aplicacao', label: 'Aplicação no Mundo Real' },
+          { id: 'reflexao', label: 'Reflexão' },
+          { id: 'referencias', label: 'Referências' },
+        ],
+        backLink: '../../index.html',
+        references: [
+          { text: 'TryHackMe - Kenobi', url: 'https://tryhackme.com/room/kenobi' }
+        ]
+      };
+      document.getElementById('header-container').innerHTML = renderHeader(pageData.header);
+      document.getElementById('sidebar-container').innerHTML = renderSidebar({ summary: pageData.summary, backLink: pageData.backLink });
+      document.getElementById('references-container').innerHTML = renderReferences({ references: pageData.references });
+      fetch('../../components/disclaimer.html').then(r => r.text()).then(html => {
+      });
+    </script>
+  </body>
+</html>

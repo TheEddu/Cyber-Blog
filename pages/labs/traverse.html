@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traverse: Enumeração de Diretórios, Exploração de APIs e Análise de Código | CyberBlog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../styles/style.css" />
+  </head>
+  <body class="text-gray-800 font-sans bg-gray-50">
+    <div id="header-container"></div>
+    <div class="flex pt-24 bg-stone-300 min-h-screen">
+      <div id="sidebar-container"></div>
+      <main class="flex-1 mx-auto max-w-3xl bg-white rounded-2xl shadow-2xl px-10 py-12 mb-12 mt-0 border border-gray-200" style="min-height:calc(100vh - 96px);">
+        <article>
+          <h2 class="text-3xl font-bold text-green-700 mb-2">Enumeração de Diretórios, Exploração de APIs e Análise de Código: Lições do Lab "Traverse"</h2>
+          <p class="text-sm text-gray-500 mb-8">Publicado em 2025</p>
+          <section class="mb-10" id="introducao">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Introdução</h3>
+            <p class="mb-4">
+              O lab "Traverse" do TryHackMe simula um ambiente web vulnerável, desafiando o participante a identificar diretórios ocultos, explorar endpoints de API inseguros e analisar código ofuscado. O objetivo é desenvolver habilidades práticas em pentest web, correlacionando pistas e explorando diferentes vetores de ataque.
+            </p>
+          </section>
+          <section class="mb-10" id="desafio">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">O Desafio</h3>
+            <p class="mb-4">
+              O desafio consiste em analisar um site comprometido, identificar arquivos e diretórios relevantes, explorar APIs mal protegidas e manipular parâmetros para obter informações sensíveis e escalar privilégios.
+            </p>
+          </section>
+          <section class="mb-10" id="raciocinio">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Raciocínio e Abordagem</h3>
+            <p class="mb-4">
+              A abordagem deste lab exigiu técnicas de análise manual, automação e raciocínio lógico. O ponto de partida foi a análise do código-fonte da página inicial, onde scripts JavaScript ofuscados e comentários revelaram pistas sobre a estrutura do sistema. A identificação de arquivos como <code>custom.min.js</code> e diretórios comentados foi fundamental para direcionar a enumeração.
+            </p>
+            <p class="mb-4">
+              A enumeração de diretórios foi realizada tanto manualmente, acessando URLs sugeridas por comentários, quanto com ferramentas automatizadas. O acesso ao diretório <code>/logs/</code> revelou informações sensíveis.
+            </p>
+            <p class="mb-4">
+              A exploração de endpoints de API exigiu criatividade e persistência. Manipulando parâmetros como <code>customer_id</code>, foi possível acessar dados de diferentes usuários, incluindo administradores. Esse processo envolveu tentativa e erro, análise das respostas da API e identificação de padrões que pudessem indicar privilégios elevados ou informações sensíveis.
+            </p>
+            <p class="mb-4">
+              A análise e deobfuscação de código JavaScript foram etapas críticas para extrair informações ocultas. Ferramentas online e conhecimento prévio sobre técnicas de ofuscação foram utilizados para decodificar scripts e identificar comandos ou credenciais embutidas.
+            </p>
+          </section>
+          <section class="mb-10" id="ferramentas">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Ferramentas, Técnicas e Conceitos Aplicados</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li><strong>Nmap:</strong> Enumeração de serviços.</li>
+              <li><strong>Análise de código-fonte:</strong> Identificação de scripts e comentários relevantes.</li>
+              <li><strong>Deobfuscação de JavaScript:</strong> Extração de informações de código ofuscado.</li>
+              <li><strong>Enumeração de diretórios:</strong> Acesso a <code>/logs/</code> e outros caminhos ocultos.</li>
+              <li><strong>Manipulação de APIs:</strong> Teste de parâmetros como <code>customer_id</code> para obter dados sensíveis.</li>
+              <li><strong>DevTools:</strong> Alteração de comandos e análise de respostas.</li>
+            </ul>
+          </section>
+          <section class="mb-10" id="problema">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Descrição do Problema</h3>
+            <p class="mb-4">
+              O principal desafio foi correlacionar pistas espalhadas pelo sistema, identificar endpoints vulneráveis e manipular parâmetros para escalar privilégios. A análise de código ofuscado e a enumeração detalhada foram cruciais para o sucesso.
+            </p>
+          </section>
+          <section class="mb-10" id="aplicacao">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Aplicação no Mundo Real</h3>
+            <p class="mb-4">
+              A exploração de APIs mal protegidas é uma das principais fontes de vazamento de dados. A análise de código-fonte e a enumeração de diretórios são base em pentests web.
+            </p>
+          </section>
+          <section class="mb-10" id="solucao">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Solução Encontrada</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li>Análise de código-fonte e identificação de scripts ofuscados.</li>
+              <li>Enumeração de diretórios e acesso a logs.</li>
+              <li>Descoberta de senhas e nomes de diretórios baseados em metodologias de desenvolvimento seguro.</li>
+              <li>Manipulação de APIs para obter dados de usuários e administradores.</li>
+              <li>Acesso ao painel administrativo e execução de comandos para coleta das flags.</li>
+            </ul>
+          </section>
+          <section class="mb-10" id="generalizacao">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Generalização do Conhecimento</h3>
+            <p class="mb-4">
+              As técnicas aplicadas neste lab são utilizadas em avaliações de segurança de aplicações web. A enumeração detalhada de diretórios e arquivos, análise de código-fonte (incluindo scripts ofuscados) e exploração de APIs são habilidades essenciais para profissionais de segurança ofensiva.
+            </p>
+            <p class="mb-4">
+              No mundo real, APIs mal protegidas são frequentemente alvo de ataques, pois podem expor dados sensíveis ou permitir escalada de privilégios. A capacidade de identificar endpoints ocultos, manipular parâmetros e analisar respostas é fundamental para detectar e explorar essas vulnerabilidades. Além disso, a análise de código ofuscado é uma habilidade valiosa para identificar backdoors, comandos ocultos ou credenciais embutidas em aplicações web.
+            </p>
+          </section>
+          <section class="mb-10" id="reflexao">
+            <h3 class="text-2xl font-semibold mb-2 text-gray-800 border-l-4 border-green-400 pl-3">Reflexão e Recomendações</h3>
+            <ul class="list-disc list-inside mb-4 space-y-1">
+              <li>Correlacionar pistas e explorar diferentes vetores de ataque.</li>
+              <li>Analisar cuidadosamente código-fonte e comentários.</li>
+              <li>Testar endpoints de API para manipulação de parâmetros.</li>
+              <li>Praticar deobfuscação de código e análise de logs.</li>
+            </ul>
+          </section>
+          <div id="references-container"></div>
+          <div id="disclaimer"></div>
+          <p class="text-center text-gray-400 mt-12">© 2025 CyberBlog</p>
+        </article>
+      </main>
+    </div>
+    <script src="../../scripts/menu.js"></script>
+    <script type="module">
+      import { renderHeader, renderSidebar, renderReferences } from '../../scripts/components.js';
+      const pageData = {
+        header: {
+          title: 'CyberBlog Labs',
+          subtitle: 'Traverse'
+        },
+        summary: [
+          { id: 'introducao', label: 'Introdução' },
+          { id: 'desafio', label: 'O Desafio' },
+          { id: 'raciocinio', label: 'Raciocínio e Abordagem' },
+          { id: 'ferramentas', label: 'Ferramentas e Técnicas' },
+          { id: 'problema', label: 'Descrição do Problema' },
+          { id: 'aplicacao', label: 'Aplicação no Mundo Real' },
+          { id: 'solucao', label: 'Solução Encontrada' },
+          { id: 'generalizacao', label: 'Generalização do Conhecimento' },
+          { id: 'reflexao', label: 'Reflexão e Recomendações' },
+          { id: 'referencias', label: 'Referências' },
+        ],
+        backLink: '../../index.html',
+        references: [
+          { text: 'TryHackMe - Traverse', url: 'https://tryhackme.com/room/traverse' }
+        ]
+      };
+      document.getElementById('header-container').innerHTML = renderHeader(pageData.header);
+      document.getElementById('sidebar-container').innerHTML = renderSidebar({ summary: pageData.summary, backLink: pageData.backLink });
+      document.getElementById('references-container').innerHTML = renderReferences({ references: pageData.references });
+      fetch('../../components/disclaimer.html').then(r => r.text()).then(html => {
+      });
+    </script>
+  </body>
+</html>
