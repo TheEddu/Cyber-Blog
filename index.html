@@ -1,236 +1,191 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CyberBlog</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="text-gray-800 font-sans">
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TheEddu</title>
+  <link rel="stylesheet" href="./src/css/styles.css">
+</head>
+<body class="bg-gradient">
   
-    <!-- Cabeçalho / Apresentação -->
-    <header class="bg-gray-900 text-gray-100 text-center py-16 px-4">
-      <h1 class="text-4xl font-bold mb-4 text-green-400">CyberBlog</h1>
-      <p class="text-lg max-w-xl mx-auto text-gray-300">
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="images/logo.png" class="logo" alt="logo">
+      <span class="site-title">CyberBlog</span>
+    </div>
+    <nav class="navigation">
+      <a href="https://theeddu.github.io/PersonalPortfolioPage/" target="_blank" class="nav-link">Portfolio</a>
+      <a href="#contato" class="nav-link">Contato</a>
+    </nav>
+  </header>
+
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1 class="hero-title">CyberBlog</h1>
+      <p class="hero-description">
         Um repositório de ideias sobre segurança da informação, programação, hacking ético, nerdices...
       </p>
-    </header>
-
-    <!-- Início do conteúdo com background -->
-    <div
-      class="bg-cover bg-center bg-no-repeat bg-fixed"
-      style="background-image: url('https://image.lexica.art/full_webp/03eb65a7-7433-406a-8934-7d8be781271e'); "
-    >
-
-      <!-- Seção de Info -->
-      <section class="pt-32 pb-16 px-6 max-w-6xl mx-auto text-center text-gray-800">
-        <div class="bg-gradient-to-br from-gray-100 via-white to-gray-50 p-10 rounded-3xl shadow-lg">
-          <div class="flex items-center justify-center mb-4 text-green-600">
-            <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 4v5c0 5-3 9-7 11-4-2-7-6-7-11V7l7-4z"/>
-            </svg>
-            <span class="text-sm font-semibold uppercase tracking-wide">Explore meu conteúdo</span>
-          </div>
-          
-          <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
-            Artigos sobre Segurança da Informação e Tecnologia
-          </h2>
-          
-          <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Nesta seção você encontra artigos didáticos voltados para quem deseja entender ou aplicar conceitos importantes de Cybersegurança no dia a dia.
-          </p>
-
-        </div>
-      </section>
-
-      <!-- Filtro de tags -->
-      <section class="text-center py-4">
-        <div class="inline-flex flex-wrap gap-2 justify-center">
-          <button class="filter-btn px-4 py-2 rounded bg-green-500 text-white hover:bg-green-600"
-                  data-filter="all">Todas</button>
-
-          <button class="filter-btn px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300"
-                  data-filter="cybersecurity">Cybersecurity</button>
-
-          <button class="filter-btn px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300"
-                  data-filter="malware">Malware</button>
-
-          <button class="filter-btn px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300"
-                  data-filter="kaizen">Kaizen</button>
-
-          <button class="filter-btn px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300"
-                  data-filter="passwords">Senhas</button>
-
-          <button class="filter-btn px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300"
-                  data-filter="anonimato">Anonimato</button>
-
-          <button class="filter-btn px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300"
-                  data-filter="engenharia-social">Engenharia Social</button>
-
-          <button class="filter-btn px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300"
-                  data-filter="saga-das-redes">Saga das Redes</button>
-
-          <button class="filter-btn px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300"
-                  data-filter="python">Python</button>
-        </div>
-      </section>
-
-      <!-- Cards de Artigos -->
-      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 pb-16 max-w-6xl mx-auto">
-        
-        <!-- Card 1 -->
-        <div class="border p-4 rounded-xl shadow-md bg-gray-100" data-tags="cybersecurity,malware,hacking">
-          <img src="./images/infoSec.jpg" alt="Thumb do Artigo Segurança da Informação: O Grimória do Cyber Aventureiro" class="w-full h-50 object-cover">
-          <h3 class="text-xl font-bold mb-2">Segurança da Informação: O Grimória do Cyber Aventureiro</h3>
-          <p class="text-gray-600 mb-4">Meu primeiro artigo, introdução a segurança da informação, alguns tópicos e conceitos fundamentais, baseado nos meus estudos.</p>
-          <a href="https://atom-ghost-36c.notion.site/ebd/1e9bbbfa653c805dbf77f6108448f72d" target="_blank" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Ler artigo</a>
-          <!-- <a href="./pages/seguranca-da-informacao.html" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Ler artigo</a> -->
-
-        </div>
-
-        <!-- Card 2 -->
-        <div class="border p-4 rounded-xl shadow-md bg-gray-100" data-tags="kaizen,produtividade">
-          <img src="./images/kaizen.jpg" alt="Kaizen: A Filosofia Japonesa de Melhoria Contínua para o Guerreiro Digital" class="w-full h-50 object-cover">
-          <h3 class="text-xl font-bold mb-2">Kaizen: A Filosofia Japonesa de Melhoria Contínua para o Guerreiro Digital</h3>
-          <p class="text-gray-600 mb-4">Esse eBook é uma introdução prática e direta à filosofia Kaizen, serve para quem atua com tecnologia, mas também para quem busca melhorar constantemente, tanto na carreira quanto na vida pessoal.</p>
-          <a href="https://atom-ghost-36c.notion.site/ebd/1eabbbfa653c80398372c71b81570f8e" target="_blank" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Ler artigo</a>
-          <!-- <a href="./pages/kaizen.html" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Ler artigo</a> -->
-
-        </div>
-
-        <!-- Card 3 -->
-        <div class="border p-4 rounded-xl shadow-md bg-gray-100" data-tags="cybersecurity,malware">
-          <img src="./images/MalwareConhecendoECombatendoEssesInimigos.jpg" alt="Malware Conhecendo e Combatendo Esses Inimigos" class="w-full h-50 object-cover">
-          <h3 class="text-xl font-bold mb-2">Malware Conhecendo e Combatendo Esses Inimigos</h3>
-          <p class="text-gray-600 mb-4">Como amante da Cybersegurança, saber sobre Malware faz parte da minha vida, então, pensei em como poderia ajudar outras pessoas a entenderem mais sobre o assunto, enquanto eu mesmo entendo melhor, e pratico como explicar o assunto para pessoas de fora da área.</p>
-          <a href="https://atom-ghost-36c.notion.site/ebd/1dbbbbfa653c80c6bbfcf4e8ccfebba7" target="_blank" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Ler artigo</a>
-          <!-- <a href="./pages/conhecendo-e-combatendo-esses-inimigos.html" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Ler artigo</a> -->
-
-        </div>
-
-        <!-- Card 4 -->
-        <div class="border p-4 rounded-xl shadow-md bg-gray-100" data-tags="cybersecurity,passwords,python">
-          <img src="./images/senhasSeguras.jpg" alt="Thumb do Artigo Forjando Senhas Seguras" class="w-full h-50 object-cover">
-          <h3 class="text-xl font-bold mb-2">Forjando Senhas Seguras</h3>
-          <p class="text-gray-600 mb-4">Eu tive a idéia de desenvolver um projeto gerador de senhas seguras com Python, depois, veio a idéia de escrever um artigo sobre senhas seguras, então, decidi unir ambas idéias em um artigo.</p>
-          <a href="https://atom-ghost-36c.notion.site/ebd/1d5bbbfa653c80419b65d1a6abcabb3c" target="_blank" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Ler artigo</a>
-           <!-- <a href="./pages/forjando-senhas-seguras.html" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Ler artigo</a> -->
-        </div>
-
-        <!-- Card 5 -->
-        <div class="border p-4 rounded-xl shadow-md bg-gray-100" data-tags="cybersecurity,anonimato,privacidade">
-          <img src="./images/modoAnonimo.jpg" alt="Thumb do Artigo Modo Anônimo: É Anônimo Mesmo?" class="w-full h-50 object-cover">
-          <h3 class="text-xl font-bold mb-2">Modo Anônimo: É Anônimo Mesmo?</h3>
-          <p class="text-gray-600 mb-4">O modo anônimo é bastante popular, mas é realmente útil para proteger sua privacidade online? Vamos explorar se ele realemente nos permite navegar de forma anônima.</p>
-          <a href="https://atom-ghost-36c.notion.site/ebd/1eabbbfa653c800f98e2c271071b3732" target="_blank" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Ler artigo</a>
-          <!-- <a href="pages/modo-anonimo.html" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Ler artigo</a> -->
-        </div>
-          <!-- Card 6 -->
-        <div class="border p-4 rounded-xl shadow-md bg-gray-100" data-tags="cybersecurity,engenharia-social,social">
-          <img src="./images/social.jpg" alt="Engenharia Social: Como Cortar as Ameaças" class="w-full h-50 object-cover">
-          <h3 class="text-xl font-bold mb-2">Engenharia Social: Como Cortar as Ameaças</h3>
-          <p class="text-gray-600 mb-4"> A Engenharia Social é uma técnica de manipulação psicológica usada por cibercriminosos para obter informações confidenciais. Neste artigo, me dediquei a pesquisar e ensinar como identificar e se proteger dessas ameaças.</p>
-          </p>
-          <a href="https://atom-ghost-36c.notion.site/ebd/1c7bbbfa653c807286c5e29e5d40c30e" target="_blank" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Ler artigo</a>
-        </div>
-          <!-- Card 7 -->
-        <div class="border p-4 rounded-xl shadow-md bg-gray-100" data-tags="python">
-          <img src="./images/python.jpg" alt="Python: Introdução" class="w-full h-50 object-cover">
-          <h3 class="text-xl font-bold mb-2">Python: Introdução</h3>
-          <p class="text-gray-600 mb-4">
-            Python é uma linguagem de programação versátil e poderosa, amplamente utilizada em diversas áreas, incluindo segurança da informação. Neste artigo, apresento uma introdução ao Python.
-          </p>
-          </p>
-          <a href="https://atom-ghost-36c.notion.site/ebd/255bbbfa653c80d693e5c636ad747a46" target="_blank" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Ler artigo</a>
-        </div>
-          <!-- Card 8 -->
-        <div class="border p-4 rounded-xl shadow-md bg-gray-100" data-tags="python">
-          <img src="" alt="FTP O Caminho das Portas Abertas" class="w-full h-50 object-cover">
-          <h3 class="text-xl font-bold mb-2">FTP O Caminho das Portas Abertas</h3>
-          <p class="text-gray-600 mb-4">
-
-          </p>
-          </p>
-          <a href="https://atom-ghost-36c.notion.site/ebd/2a3bbbfa653c80d8be1fd8e8dee0d199" target="_blank" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Ler artigo</a>
-        </div>
-      </section>
-      
-      <section class="pt-32 pb-16 px-6 max-w-6xl mx-auto text-center text-gray-800">
-        <div class="bg-gradient-to-br from-gray-100 via-white to-gray-50 p-10 rounded-3xl shadow-lg">
-          <div class="flex items-center justify-center mb-4 text-green-600">
-            <svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 4v5c0 5-3 9-7 11-4-2-7-6-7-11V7l7-4z"/>
-            </svg>
-            <span class="text-sm font-semibold uppercase tracking-wide">Explore meu conteúdo</span>
-          </div>
-          
-          <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
-            A Saga das Redes
-          </h2>
-          
-          <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            A Saga das Redes é uma série de artigos que explora conceitos fundamentais de redes de computadores, desde o modelo OSI até a configuração de firewalls. Cada artigo é uma jornada para entender melhor como as redes funcionam e como podemos protegê-las.
-          </p>
-        </div>
-      </section>
-
-      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 pb-16 max-w-6xl mx-auto">
-        
-        <div class="border p-4 rounded-xl shadow-md bg-gray-100">
-          <img src="./images/osi.jpg" alt="A Saga das Redes: OSI" class="w-full h-50 object-cover" data-tags="saga-das-redes">
-          <h3 class="text-xl font-bold mb-2">A Saga das Redes: OSI</h3>
-          <p class="text-gray-600 mb-4">
-            O modelo OSI é fundamental para entender como as redes de computadores funcionam. Neste artigo, exploramos cada camada do modelo OSI e sua importância na comunicação em rede.
-          </p>
-          <a href="https://atom-ghost-36c.notion.site/ebd/205bbbfa653c80b392c7eebbe2a59bd7" target="_blank" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Ler artigo</a>
-          <!-- <a href="./pages/kaizen.html" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Ler artigo</a> -->
-        </div>
-
-        <div class="border p-4 rounded-xl shadow-md bg-gray-100">
-          <img src="./images/firewall.jpg" alt="A Saga das Redes: Firewall" class="w-full h-50 object-cover" data-tags="saga-das-redes">
-          <h3 class="text-xl font-bold mb-2">A Saga das Redes: Firewall</h3>
-          <p class="text-gray-600 mb-4">
-            Firewalls são essenciais para proteger redes contra ameaças externas. Neste artigo, apresento os diferentes tipos de firewalls, configurações e boas práticas para a segurança da rede.
-          </p>
-          <a href="https://atom-ghost-36c.notion.site/ebd/1e8bbbfa653c806eba86e2cc5bd21a7c" target="_blank" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Ler artigo</a>
-          <!-- <a href="./pages/conhecendo-e-combatendo-esses-inimigos.html" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Ler artigo</a> -->
-        </div>
-        <div class="border p-4 rounded-xl shadow-md bg-gray-100" data-tags="saga-das-redes">
-          <img src="./images/proxy.jpg" alt="A Saga das Redes: Proxy Forward & Reverse" class="w-full h-50 object-cover">
-          <h3 class="text-xl font-bold mb-2">A Saga das Redes: Proxy Forward & Reverse</h3>
-          <p class="text-gray-600 mb-4">
-            Proxies são ferramentas essenciais para a privacidade e segurança online. Neste artigo, me dediquei a estudar e aprender para explicar os conceitos de proxy forward e reverse, suas diferenças e como utilizá-los.
-          </p>
-          </p>
-          <a href="https://atom-ghost-36c.notion.site/ebd/205bbbfa653c80e5bc99f5754ba1f699" target="_blank" class="inline-block bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Ler artigo</a>
-        </div>
-
-      </section>
-
-      <section class="text-center py-16 px-4 bg-gray-100 rounded-lg shadow-md max-w-4xl mx-auto">
-        <div class="flex flex-col items-center">
-          <img src="./images/profile.jpg" alt="profile" class="w-32 h-32 rounded-full shadow-md mb-6">
-          
-          <h2 class="text-2xl font-semibold text-green-400 mb-4">Sobre o Autor</h2>
-          
-          <p class="text-lg text-gray-700 mb-4">
-            Formado em Segurança da Informação, focado em aprendizado constante e autodidata. Escrevo este material como parte do meu portfólio, com o objetivo de compartilhar meus conhecimentos e habilidades de forma simples, acessível e gratuita.
-          </p>
-          
-          <ul class="text-left text-gray-700 space-y-2">
-            <li><strong>Educação:</strong> Estudante autodidata e leitor assíduo.</li>
-            <li><strong>Hobbies:</strong> Leituras, jogos e práticas em laboratórios de segurança.</li>
-            <li><strong>Valores:</strong> Autogestão, aprendizado contínuo, ética no trabalho e dedicação.</li>
-            <li><strong>Áreas de Interesse:</strong> Tecnologia, idiomas e segurança digital.</li>
-          </ul>
-        </div>
-      </section>
-      
-      <footer class="text-center text-gray-500 text-sm mt-16 mb-4 bg-gray-100 py-4">
-        © 2025 CyberBlog. Cultivado no terminal.
-      </footer>
+      <a href="#labs" class="hero-button">Ver Artigos</a>
     </div>
+    <img src="./images/profile.jpg" class="hero-image" alt="avatar">
+  </section>
 
-    <script src="/scripts/filter.js"></script>
-  </body>
+  <!-- Subtítulo / Sobre -->
+  <section class="about">
+    <div class="about-content">
+      <h2 class="about-title">Artigos sobre Segurança da Informação e Tecnologia</h2>
+      <p class="about-description">
+        Nesta seção você encontra artigos didáticos voltados para quem deseja entender ou aplicar conceitos importantes de Cybersegurança no dia a dia.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filtro de tags -->
+  <section class="text-center py-4">
+    <div class="inline-flex flex-wrap gap-2 justify-center">
+      <button class="filter-btn px-4 py-2 rounded bg-green-500 text-white hover:bg-green-600"
+              data-filter="all">Todas</button>
+
+      <button class="filter-btn px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300"
+              data-filter="cybersecurity">Cybersecurity</button>
+
+      <button class="filter-btn px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300"
+              data-filter="malware">Malware</button>
+
+      <button class="filter-btn px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300"
+              data-filter="kaizen">Kaizen</button>
+
+      <button class="filter-btn px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300"
+              data-filter="passwords">Senhas</button>
+
+      <button class="filter-btn px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300"
+              data-filter="anonimato">Anonimato</button>
+
+      <button class="filter-btn px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300"
+              data-filter="engenharia-social">Engenharia Social</button>
+
+      <button class="filter-btn px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300"
+              data-filter="saga-das-redes">Saga das Redes</button>
+
+      <button class="filter-btn px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300"
+              data-filter="python">Python</button>
+    </div>
+  </section>
+
+
+  <!-- Labs realizados -->
+  <section id="labs" class="labs">
+    <!-- <h2 class="labs-title">Artigos...</h2> -->
+    <div class="labs-grid">
+      <!-- Lab card 1 -->
+      <div class="article-card" data-tags="cybersecurity,malware,hacking">
+        <img src="./images/infoSec.jpg" class="article-image" alt="Thumb do Artigo Segurança da Informação: O Grimória do Cyber Aventureiro" >
+        <h3 class="article-title">Segurança da Informação: O Grimória do Cyber Aventureiro</h3>
+        <p class="article-description">
+          Meu primeiro artigo, introdução a segurança da informação, alguns tópicos e conceitos fundamentais, baseado nos meus estudos.
+        </p>
+        <a href="https://atom-ghost-36c.notion.site/ebd/1e9bbbfa653c805dbf77f6108448f72d" class="article-button" target="_blank">Ler</a>
+      </div>
+
+
+      <!-- Lab card 2 -->
+      <div class="article-card">
+        <img src="./images/kaizen.jpg" data-tags="kaizen,produtividade" class="article-image" alt="Kaizen: A Filosofia Japonesa de Melhoria Contínua para o Guerreiro Digital">
+        <h3 class="article-title">Kaizen: A Filosofia Japonesa de Melhoria Contínua para o Guerreiro Digital</h3>
+        <p class="article-description">
+          Esse eBook é uma introdução prática e direta à filosofia Kaizen, serve para quem atua com tecnologia, mas também para quem busca melhorar constantemente, tanto na carreira quanto na vida pessoal.
+        </p>
+        <a href="https://atom-ghost-36c.notion.site/ebd/1eabbbfa653c80398372c71b81570f8e" class="article-button" target="_blank">Ler</a>
+      </div>
+
+      <!-- Lab card 3 -->
+      <div class="article-card">
+        <img src="./images/MalwareConhecendoECombatendoEssesInimigos.jpg" class="article-image" data-tags="cybersecurity,malware" alt="Malware Conhecendo e Combatendo Esses Inimigos">
+        <h3 class="article-title">Malware: Conhecendo e Combatendo Esses Inimigos</h3>
+        <p class="article-description">
+          Como amante da Cybersegurança, saber sobre Malware faz parte da minha vida, então, pensei em como poderia ajudar outras pessoas a entenderem mais sobre o assunto, enquanto eu mesmo entendo melhor, e pratico como explicar o assunto para pessoas de fora da área.
+        </p>
+        <a href="https://atom-ghost-36c.notion.site/ebd/1dbbbbfa653c80c6bbfcf4e8ccfebba7" class="article-button" target="_blank">Ler</a>
+      </div>
+
+      <!-- Lab card 4 -->
+      <div class="article-card">
+        <img src="./images/senhasSeguras.jpg" class="article-image" data-tags="cybersecurity,passwords,python" alt="Forjando Senhas Seguras">
+        <h3 class="article-title">Forjando Senhas Seguras</h3>
+        <p class="article-description">
+          Eu tive a idéia de desenvolver um projeto gerador de senhas seguras com Python, depois, veio a idéia de escrever um artigo sobre senhas seguras, então, decidi unir ambas idéias em um artigo.
+        </p>
+        <a href="https://atom-ghost-36c.notion.site/ebd/1d5bbbfa653c80419b65d1a6abcabb3c" class="article-button" target="_blank">Ler</a>
+      </div>
+
+      <!-- Lab card 5 -->
+      <div class="article-card">
+        <img src="./images/modoAnonimo.jpg" class="article-image" data-tags="cybersecurity,anonimato,privacidade" alt="Modo Anônimo: É Anônimo Mesmo?">
+        <h3 class="article-title">Modo Anônimo: É Anônimo Mesmo?</h3>
+        <p class="article-description">
+          O modo anônimo é bastante popular, mas é realmente útil para proteger sua privacidade online? Vamos explorar se ele realemente nos permite navegar de forma anônima.
+        </p>
+        <a href="https://atom-ghost-36c.notion.site/ebd/1eabbbfa653c800f98e2c271071b3732" class="article-button" target="_blank">Ler</a>
+      </div>
+
+      <!-- Lab card 6 -->
+      <div class="article-card">
+        <img src="./images/social.jpg" class="article-image" data-tags="cybersecurity,engenharia-social"alt="Engenharia Social: Como Cortar as Ameaças">
+        <h3 class="article-title">Engenharia Social: Como Cortar as Ameaças</h3>
+        <p class="article-description">
+          A Engenharia Social é uma técnica de manipulação psicológica usada por cibercriminosos para obter informações confidenciais. Neste artigo, me dediquei a pesquisar e ensinar como identificar e se proteger dessas ameaças.
+        </p>
+        <a href="https://atom-ghost-36c.notion.site/ebd/1c7bbbfa653c807286c5e29e5d40c30e" class="article-button">Ler</a>
+      </div>
+
+      <!-- Lab card 7 -->
+      <div class="article-card">
+        <img src="./images/python.jpg" data-tags="python" class="article-image" alt="Python: Introdução">
+        <h3 class="article-title">Python: Introdução</h3>
+        <p class="article-description">
+          Python é uma linguagem de programação versátil e poderosa, amplamente utilizada em diversas áreas, incluindo segurança da informação. Neste artigo, apresento uma introdução ao Python.
+        </p>
+        <a href="https://atom-ghost-36c.notion.site/ebd/255bbbfa653c80d693e5c636ad747a46" class="article-button" target="_blank" >Ler</a>
+      </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <section class="disclaimer" id="disclaimer">
+    <h3 class="disclaimer-title">Disclaimer</h3>
+    <p class="disclaimer-text">
+      Este material foi elaborado para compartilhar conhecimento de forma gratuita e acessível. Sou um eterno estudante, e todo o conteúdo aqui apresentado reflete meus estudos, interpretações e experiências pessoais durante minha jornada de aprendizado.
+    </p>
+    <ul class="disclaimer-list">
+      <li>Estes Artigos não tem fins comerciais e não possui qualquer vínculo.</li>
+      <li>Todo o conteúdo foi desenvolvido de forma original, sem a intenção de reproduzir ou plagiar obras de terceiros.</li>
+      <li>Caso algum trecho coincida com materiais já existentes, trata-se de coincidência não intencional e estou aberto a revisar/corrigir/remover o conteúdo, se necessário.</li>
+      <li>As informações aqui contidas não substituem orientações profissionais ou consultorias especializadas em segurança da informação.</li>
+      <li>As ilustrações presentes neste material foram geradas por inteligência artificial ou obtidas de fontes de imagens de uso livre, com o objetivo de tornar a leitura mais visual e didática. Elas não representam pessoas, obras reais ou eventos específicos, não possuem fins comerciais e são utilizadas exclusivamente como recurso ilustrativo e complementar ao conteúdo educativo.</li>
+    </ul>
+    <p class="disclaimer-text">
+      Este material é parte do meu portfólio como estudante e tem como objetivo demonstrar habilidades, incentivar o aprendizado e colaborar com a comunidade.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contato" class="footer">
+    <div class="footer-logo-container">
+      <img src="images/logo.png" class="footer-logo" alt="logo">
+      <span class="footer-title">TheEddu</span>
+    </div>
+    <div class="footer-links">
+      <p class="footer-text">Acesse meus perfis:</p>
+      <a class="footer-link" target="_blank" href="https://github.com/TheEddu">GitHub</a><br>
+      <a class="footer-link" target="_blank" href="https://www.linkedin.com/in/eduardo-s-b39896205/">LinkedIn</a><br>
+      <a class="footer-link" target="_blank" href="https://tryhackme.com/p/TheEddu">TryHackMe</a>
+      <p class="footer-copyright">&copy; 2025</p>
+    </div>
+  </footer>
+
+  <script src="./js/filter.js"></script>
+</body>
 </html>
+
