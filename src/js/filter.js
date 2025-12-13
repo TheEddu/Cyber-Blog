@@ -1,37 +1,41 @@
-// Função auxiliar: transforma a string de tags em um Set para busca rápida
-const getTagSet = (el) => new Set(
-    (el.dataset.tags || '')
-        .toLowerCase()
-        .split(',')
-        .map(t => t.trim())
-        .filter(Boolean)
-);
 
-// Seleciona todos os cards e botões
-const cards   = document.querySelectorAll('[data-tags]');
+const cards = document.querySelectorAll('.labs-grid .article-card');
+
+// Busca tags 
+const getTagSet = (card) => {
+
+    const el = card.querySelector('[data-tags]') || card;
+    return new Set(
+        (el.dataset.tags || '')
+            .toLowerCase()
+            .split(',')
+            .map(t => t.trim())
+            .filter(Boolean)
+    );
+};
+
+// Seleciona botões
 const buttons = document.querySelectorAll('.filter-btn');
 
-// Atualiza visual dos botões (ativo/inativo)
+// Atualiza visual dos botões
 const setActiveButton = (activeBtn) => {
     buttons.forEach(btn => {
-        btn.classList.toggle('bg-green-500', btn === activeBtn);
-        btn.classList.toggle('text-white', btn === activeBtn);
-        btn.classList.toggle('bg-gray-200', btn !== activeBtn);
-        btn.classList.toggle('text-gray-800', btn !== activeBtn);
+        btn.classList.toggle('active', btn === activeBtn);
     });
 };
 
-// Handler de clique
+
 const filterCards = (tag) => {
+    console.log('Filtrando por:', tag);
     cards.forEach(card => {
         const tags = getTagSet(card);
-        // "all" mostra tudo
-        const shouldShow = tag === 'all' || tags.has(tag);
-        card.classList.toggle('hidden', !shouldShow);
+        console.log('Card tags:', Array.from(tags)); 
+        const shouldShow = tag === 'all' || tags.has(tag.toLowerCase());
+        card.style.display = shouldShow ? '' : 'none';
     });
 };
 
-// Vincula eventos aos botões
+
 buttons.forEach(btn => {
     btn.addEventListener('click', () => {
         const tag = btn.dataset.filter.toLowerCase();
@@ -40,6 +44,10 @@ buttons.forEach(btn => {
     });
 });
 
-// Inicializa mostrando tudo e marcando "Todas"
-document.querySelector('.filter-btn[data-filter="all"]').click();
 
+const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+if (allBtn) {
+    allBtn.click();
+} else {
+    console.error('Botão "all" não encontrado!');
+}

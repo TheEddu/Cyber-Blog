@@ -1,6 +1,6 @@
 /* General */
 body {
-  background: url('https://image.lexica.art/full_webp/07e6b716-54bb-4a7c-a1a0-d6a05cc33f41') no-repeat center center fixed;
+  background: url('https://image.lexica.art/full_webp/1be0ddd5-3260-444f-91e0-24f2e701d0e6') no-repeat center center fixed;
   background-size: cover;
   color: white;
   font-family: sans-serif;
@@ -55,32 +55,26 @@ body {
   justify-content: center;
 }
 
+.filter-btn.active {
+  background-color: #34d399;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .filter-btn {
+  background-color: #e5e7eb;
+  color: #1f2937;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem; 
   font-size: 1rem; 
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.filter-btn[data-filter="all"] {
-  background-color: #34d399;
-  color: white;
-}
-
-.filter-btn[data-filter="all"]:hover {
-  background-color: #059669; 
-}
-
-.filter-btn:not([data-filter="all"]) {
-  background-color: #e5e7eb; 
-  color: #1f2937; 
-}
-
-.filter-btn:not([data-filter="all"]):hover {
-  background-color: #d1d5db; 
+.filter-btn:hover {
+  background-color: #d1d5db;
 }
 
 .logo-container {
