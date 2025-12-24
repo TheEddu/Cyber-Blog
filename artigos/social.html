@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title></title> <!-- O título será preenchido via JS -->
+  <meta name="description" content="">
+  <link rel="stylesheet" href="../src/css/styles.css">
+  <link rel="stylesheet" href="../src/css/articles-styles.css">
+</head>
+<body>
+  <div class="article-container">
+    <a href="../index.html" class="back-link">← Voltar para a lista de artigos</a>
+    <div id="content">
+      <p>Carregando artigo...</p>
+    </div>
+  </div>
+
+  <!-- marked.js -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+
+  <!-- Seu JS personalizado -->
+  <script src="../src/js/main.js"></script>
+
+  <script>
+    // Configuração específica deste artigo
+    const ARTIGO_CONFIG = {
+      mdFile: "md/social.md",  // ← ALTERAR PARA CADA ARTIGO
+      title: "Engenharia Social: Como Cortar as Ameaças"
+    };
+
+    // Carregar automaticamente ao abrir a página
+    document.addEventListener("DOMContentLoaded", () => {
+      loadArticle(ARTIGO_CONFIG);
+    });
+  </script>
+</body>
+</html>
