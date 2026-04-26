@@ -6,14 +6,9 @@ function loadArticle(config) {
       if (!response.ok) throw new Error("Arquivo não encontrado");
       return response.text();
     })
-    .then(text => {
-      let html = marked.parse(text);
-
-        html = html.replaceAll(
-          'src="../../images/',
-          'src="/Cyber-Blog/images/'
-        );
-      document.getElementById("content").innerHTML = html;
+    .then(text => { 
+      const html = marked.parse(text); 
+      document.getElementById("content").innerHTML = html; 
     })
     .catch(err => {
       console.error(err);
