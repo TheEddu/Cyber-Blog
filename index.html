@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TheEddu</title>
+  <link rel="stylesheet" href="./src/css/styles.css">
+</head>
+<body class="bg-gradient">
+  
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="images/logo.png" class="logo" alt="logo">
+      <span class="site-title">CyberBlog</span>
+    </div>
+    <nav class="navigation">
+      <a href="https://theeddu.github.io/PersonalPortfolioPage/" target="_blank" class="nav-link">Portfolio</a>
+      <a href="#contato" class="nav-link">Contato</a>
+    </nav>
+  </header>
+
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1 class="hero-title">CyberBlog</h1>
+      <p class="hero-description">
+        Um repositório de ideias sobre segurança da informação, programação, hacking ético, nerdices...
+      </p>
+      <a href="#labs" class="hero-button">Ver Artigos</a>
+    </div>
+    <img src="./images/profile.jpg" class="hero-image" alt="avatar">
+  </section>
+
+  <!-- Subtitulo / Sobre -->
+  <section class="about">
+    <div class="about-content">
+      <h2 class="about-title">Artigos sobre Segurança da Informação e Tecnologia</h2>
+      <p class="about-description">
+        Nesta seção você encontra artigos didáticos voltados para quem deseja entender ou aplicar conceitos importantes de Cybersegurança no dia a dia.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filtro de tags -->
+  <section class="text-center py-4">
+    <div class="inline-flex flex-wrap gap-2 justify-center">
+      <button class="filter-btn"
+              data-filter="all">Todas</button>
+
+      <button class="filter-btn"
+              data-filter="cybersecurity">Cybersecurity</button>
+              
+      <button class="filter-btn"
+              data-filter="docker">Docker</button>
+
+      <button class="filter-btn"
+              data-filter="malware">Malware</button>
+
+      <button class="filter-btn"
+              data-filter="kaizen">Kaizen</button>
+
+      <button class="filter-btn"
+              data-filter="passwords">Senhas</button>
+
+      <button class="filter-btn"
+              data-filter="anonimato">Anonimato</button>
+
+      <button class="filter-btn"
+              data-filter="engenharia-social">Engenharia Social</button>
+
+      <button class="filter-btn"
+              data-filter="database">Banco de Dados</button>
+
+      <button class="filter-btn"
+              data-filter="shell">Shell</button>
+
+      <!-- <button class="filter-btn px-4 py-2 rounded bg-gray-200 text-gray-800 hover:bg-gray-300"
+              data-filter="saga-das-redes">Saga das Redes</button> -->
+
+      <button class="filter-btn"
+              data-filter="python">Python</button>
+    </div>
+  </section>
+
+
+  <!-- Artigos -->
+  <section id="labs" class="labs">
+    <!-- <h2 class="labs-title">Artigos...</h2> -->
+    <div class="labs-grid">
+      <!-- Lab card 1 -->
+      <div class="article-card" data-tags="cybersecurity,malware,hacking">
+        <img src="./images/infoSec.jpg" class="article-image" alt="Thumb do Artigo Segurança da Informação: O Grimória do Cyber Aventureiro" >
+        <h3 class="article-title">Segurança da Informação: O Grimória do Cyber Aventureiro</h3>
+        <p class="article-description">
+          Meu primeiro artigo, introdução a segurança da informação, alguns tópicos e conceitos fundamentais, baseado nos meus estudos.
+        </p>
+        <a href="./artigos/infoSec.html" class="article-button" target="_blank">Ler</a>
+      </div>
+
+      <!-- Lab card 2 -->
+      <div class="article-card" data-tags="kaizen,produtividade">
+        <img src="./images/kaizen.jpg" class="article-image" alt="Kaizen: A Filosofia Japonesa de Melhoria Contínua para o Guerreiro Digital">
+        <h3 class="article-title">Kaizen: A Filosofia Japonesa de Melhoria Contínua para o Guerreiro Digital</h3>
+        <p class="article-description">
+          Esse eBook é uma introdução prática e direta à filosofia Kaizen, serve para quem atua com tecnologia, mas também para quem busca melhorar constantemente, tanto na carreira quanto na vida pessoal.
+        </p>
+        <a href="./artigos/kaizen.html" class="article-button" target="_blank">Ler</a>
+      </div>
+
+      <!-- Lab card 3 -->
+      <div class="article-card" data-tags="docker,shell">
+        <img src="https://image.lexica.art/full_webp/11dfd817-3f6c-4812-ba26-077d2dbb5aae" class="article-image" alt="Script para Docker">
+        <h3 class="article-title">Script para Docker</h3>
+        <p class="article-description">
+          Docker é uma plataforma popular para desenvolver, enviar e executar aplicações em contêineres. <br>
+          Logo que comecei a trabalhar com Docker, notei que existem vários comandos, e também que muitos deles são usados de forma repetida, então, por que não criar um script para automatizar e faciliar esse processo?
+        </p>
+        <a href="./artigos/scriptDocker.html" class="article-button" target="_blank" >Ler</a>
+      </div>
+
+      <!-- Lab card 4 -->
+      <div class="article-card" data-tags="docker,database">
+        <img src="https://image.lexica.art/full_webp/0a92c22b-8e31-4e82-9245-1efba8ecb488" class="article-image" alt="Mysql com Docker no VS Code">
+        <h3 class="article-title">Mysql com Docker no VS Code</h3>
+        <p class="article-description">
+          
+        </p>
+        <a href="./artigos/mysql-docker.html" class="article-button" target="_blank" >Ler</a>
+      </div>
+
+      <!-- Lab card 5 -->
+      <div class="article-card" data-tags="cybersecurity,anonimato,privacidade">
+        <img src="./images/modoAnonimo.jpg" class="article-image" alt="Modo Anônimo: É Anônimo Mesmo?">
+        <h3 class="article-title">Modo Anônimo: É Anônimo Mesmo?</h3>
+        <p class="article-description">
+          O modo anônimo é bastante popular, mas é realmente útil para proteger sua privacidade online? Vamos explorar se ele realemente nos permite navegar de forma anônima.
+        </p>
+        <a href="./artigos/modoAnonimo.html" class="article-button" target="_blank">Ler</a>
+      </div>
+
+      <!-- Lab card 6 -->
+      <div class="article-card" data-tags="cybersecurity,engenharia-social">
+        <img src="./images/social.jpg" class="article-image" alt="Engenharia Social: Como Cortar as Ameaças">
+        <h3 class="article-title">Engenharia Social: Como Cortar as Ameaças</h3>
+        <p class="article-description">
+          A Engenharia Social é uma técnica de manipulação psicológica usada por cibercriminosos para obter informações confidenciais. <br>
+          Neste artigo, me dediquei a pesquisar e ensinar como identificar e se proteger dessas ameaças.
+        </p>
+        <a href="./artigos/social.html" class="article-button">Ler</a>
+      </div>
+
+      <!-- Lab card 7 -->
+      <div class="article-card" data-tags="python">
+        <img src="https://image.lexica.art/full_webp/40abe69d-479e-4eb3-bec6-8b33328f99c2" class="article-image" alt="Python: Introdução">
+        <h3 class="article-title">Python: Introdução</h3>
+        <p class="article-description">
+          Python é uma linguagem de programação versátil e poderosa, amplamente utilizada em diversas áreas, incluindo segurança da informação. <br>
+          Neste artigo, apresento uma introdução ao Python.
+        </p>
+        <a href="./artigos/python-introduction.html" class="article-button" target="_blank" >Ler</a>
+      </div>
+      
+      <!-- Lab card 8 -->
+      <div class="article-card" data-tags="cybersecurity,malware">
+        <img src="./images/MalwareConhecendoECombatendoEssesInimigos.jpg" class="article-image" alt="Malware Conhecendo e Combatendo Esses Inimigos">
+        <h3 class="article-title">Malware: Conhecendo e Combatendo Esses Inimigos</h3>
+        <p class="article-description">
+          Como amante da Cybersegurança, saber sobre Malware faz parte da minha vida, então, pensei em como poderia ajudar outras pessoas a entenderem mais sobre o assunto, enquanto eu mesmo entendo melhor, e pratico como explicar o assunto para pessoas de fora da área.
+        </p>
+        <a href="./artigos/MalwareConhecendoECombatendoEssesInimigos.html" class="article-button" target="_blank">Ler</a>
+      </div>
+
+      
+      <!-- Lab card 9 -->
+      <div class="article-card" data-tags="cybersecurity,passwords,python">
+        <img src="./images/senhasSeguras.jpg" class="article-image" alt="Forjando Senhas Seguras">
+        <h3 class="article-title">Forjando Senhas Seguras</h3>
+        <p class="article-description">
+          Eu tive a idéia de desenvolver um projeto gerador de senhas seguras com Python, depois, veio a idéia de escrever um artigo sobre senhas seguras, então, decidi unir ambas idéias em um artigo.
+        </p>
+        <a href="./artigos/senhasSeguras.html" class="article-button" target="_blank">Ler</a>
+      </div>
+
+
+      <!-- Lab card 10 -->
+      <div class="article-card" data-tags="database">
+        <img src="./images/" class="article-image" alt="SQL - Video Game Sales">
+        <h3 class="article-title">SQL - Video Game Sales</h3>
+        <p class="article-description">
+          Análise de um banco de dados de vendas de videogames usando SQL para extrair insights interessantes sobre o mercado de jogos.
+        </p>
+        <a href="./artigos/sqlVideoGameSales.html" class="article-button" target="_blank">Ler</a>
+      </div>
+
+
+  </section>
+
+  <!-- Disclaimer -->
+  <section class="disclaimer" id="disclaimer">
+    <h3 class="disclaimer-title">Disclaimer</h3>
+    <p class="disclaimer-text">
+      Este material foi elaborado para compartilhar conhecimento de forma gratuita e acessível. Sou um eterno estudante, e todo o conteúdo aqui apresentado reflete meus estudos, interpretações e experiências pessoais durante minha jornada de aprendizado.
+    </p>
+    <ul class="disclaimer-list">
+      <li>Estes Artigos não tem fins comerciais e não possui qualquer vínculo.</li>
+      <li>Todo o conteúdo foi desenvolvido de forma original, sem a intenção de reproduzir ou plagiar obras de terceiros.</li>
+      <li>Caso algum trecho coincida com materiais já existentes, trata-se de coincidência não intencional e estou aberto a revisar/corrigir/remover o conteúdo, se necessário.</li>
+      <li>As informações aqui contidas não substituem orientações profissionais ou consultorias especializadas em segurança da informação.</li>
+      <li>As ilustrações presentes neste material foram geradas por inteligência artificial ou obtidas de fontes de imagens de uso livre, com o objetivo de tornar a leitura mais visual e didática. Elas não representam pessoas, obras reais ou eventos específicos, não possuem fins comerciais e são utilizadas exclusivamente como recurso ilustrativo e complementar ao conteúdo educativo.</li>
+    </ul>
+    <p class="disclaimer-text">
+      Este material é parte do meu portfólio como estudante e tem como objetivo demonstrar habilidades, incentivar o aprendizado e colaborar com a comunidade.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contato" class="footer">
+    <div class="footer-logo-container">
+      <img src="images/logo.png" class="footer-logo" alt="logo">
+      <span class="footer-title">TheEddu</span>
+    </div>
+    <div class="footer-links">
+      <p class="footer-text">Acesse meus perfis:</p>
+      <a class="footer-link" target="_blank" href="https://github.com/TheEddu">GitHub</a><br>
+      <a class="footer-link" target="_blank" href="https://www.linkedin.com/in/eduardo-s-b39896205/">LinkedIn</a><br>
+      <a class="footer-link" target="_blank" href="https://tryhackme.com/p/TheEddu">TryHackMe</a>
+      <p class="footer-copyright">&copy; 2025 The Eddu. Feito com dedicação e disciplina.</p>
+    </div>
+  </footer>
+
+  <script src="./src/js/filter.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,41 @@
+/* Estilos específicos para o artigo */
+.article-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  background-color: #fff1f1c7; /* Fundo claro para o texto */
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: #666;
+  text-decoration: none;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para blocos de código */
+.article-container pre {
+  background-color: #5c5757; /* Fundo escuro para código */
+  color: #f8f8f2; /* Texto claro */
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+}
+
+.article-container code {
+  background-color: #e8e8e8; /* Fundo leve para código inline */
+  color: #333;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+}
