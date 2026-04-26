@@ -7,16 +7,12 @@ function loadArticle(config) {
       return response.text();
     })
     .then(text => {
-      const html = marked.parse(text);
-      document.getElementById("content").innerHTML = html;
-    })
-    .then(text => {
       let html = marked.parse(text);
 
-      html = html.replaceAll(
-        'src="../../images/',
-        'src="/Cyber-Blog/images/'
-      );
+        html = html.replaceAll(
+          'src="../../images/',
+          'src="/Cyber-Blog/images/'
+        );
       document.getElementById("content").innerHTML = html;
     })
     .catch(err => {
