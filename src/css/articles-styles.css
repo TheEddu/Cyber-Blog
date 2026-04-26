@@ -39,3 +39,11 @@
   font-family: 'Courier New', Courier, monospace;
   font-size: 0.95rem;
 }
+
+/* Estilo para imagens */
+.article-container img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 5px;
+}
