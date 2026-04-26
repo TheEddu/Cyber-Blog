@@ -21,7 +21,7 @@ A rede local foi planejada com o endereço **192.168.10.1/24**, com distribuiç�
         
 - Aplicar limite de banda de **50 Mbps** para a rede Guest
 
-![Proposta](/images/routerConfiguration/proposta.jpg)
+![Proposta](../../images/routerConfiguration/proposta.jpg)
 (Desenho feito pelo professor para orientações)
 
 ---
@@ -74,7 +74,7 @@ Após a configuração, foram realizados testes práticos para validar o funcion
     
 - Bloqueio e desbloqueio de um dispositivo conectado, validando o controle de acesso do roteador
     
-![Demonstração](/images/routerConfiguration/demonstracao.jpg)
+![Demonstração](../../images/routerConfiguration/demonstracao.jpg)
 ---
 
 ### **Benefícios da configuração realizada**
