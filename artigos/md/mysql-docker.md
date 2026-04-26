@@ -35,7 +35,7 @@ Criei um arquivo `docker-compose.yml` com uma configuração básica de MySQL co
 
 Meu exemplo:
 
-![image.png](image.png)
+![image.png](/Cyber-Blog/images/routerConfiguration/image.png)
 
 Depois disso é só subir o Container!
 
@@ -48,7 +48,7 @@ Com o container iniciado, podemos conferir se ele está funcionando:
 - Com `docker ps` para ver se o serviço `mysql` aparece como `Up`.
 - Podemos testar dentro do mysql no terminal com`docker exec -it mysql-dev mysql -u root -p`.
 
-![image.png](image%201.png)
+![image.png](/Cyber-Blog/images/routerConfiguration/image%201.png)
 
 ---
 
@@ -64,7 +64,7 @@ Com a extensão instalada, podemos criar uma conexão apontando para o container
 
 Depois de salvar a conexão, já podemos ver a conexão feita, nesse caso como “localhost@3306”.
 
-![image.png](image%202.png)
+![image.png](/Cyber-Blog/images/routerConfiguration/image%202.png)
 
 ---
 

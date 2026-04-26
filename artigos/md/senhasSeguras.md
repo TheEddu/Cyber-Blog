@@ -98,13 +98,13 @@ Antes de começar a escrever código, é importante preparar o ambiente. Ambient
 
 Após ativar no ambiente, o nome dele aparece entre parênteses no começo, aproveitei para verificar as versões do Python3 e pip3.
 
-![image.png](image.png)
+![image.png](Cyber-Blog/images/senhasSeguras/image.png)
 
 Com ambos instalados podemos começar com a estrutura do projeto.
 
 Como vou usar Flask, é o que precisamos instalar, com `pip install flask`.
 
-![image.png](image%201.png)
+![image.png](Cyber-Blog/images/senhasSeguras/image%201.png)
 
 Para um pouco mais de segurança e profissionalismo, é bom criar o arquivo “requirements.txt”, ele armazena os “pré-requisitos” para executar o programa, desse modo, podemos “passar” para outra máquina e instalar essas dependências para que o programa possa ser executável, se enviar o programa com requirements.txt para o GitHub, quem baixar o programa pode executá-lo para que o programa funcione.
 
@@ -112,7 +112,7 @@ Para um pouco mais de segurança e profissionalismo, é bom criar o arquivo “r
 
 Com o `> requirements.txt` essas dependências são adicionadas no arquivo.
 
-![image.png](image%202.png)
+![image.png](Cyber-Blog/images/senhasSeguras/image%202.png)
 
 # O que é Flask?
 

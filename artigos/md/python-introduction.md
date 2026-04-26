@@ -109,7 +109,7 @@ else:
 
 Resultado:
 
-![condicionais.png](condicionais.png)
+![condicionais.png](Cyber-Blog/images/python-introduction/condicionais.png)
 
 ---
 
@@ -140,7 +140,7 @@ print("Namekusei foi destruído!")
 
 Resultado:
 
-![contagem.png](contagem.png)
+![contagem.png](Cyber-Blog/images/python-introduction/contagem.png)
 
 OBS: O `time.sleep(1)` é usado para simular uma pausa de 1 segundo entre as iterações, tornando a contagem mais realista. É um pouco mais avançado, mas não é difícil de entender.
 Precisa do "import time" para funcionar, pois é uma biblioteca que permite fazer pausas no código.
@@ -212,7 +212,7 @@ print(pokemons)
 
 Resultado:
 
-![lista.png](lista.png)
+![lista.png](Cyber-Blog/images/python-introduction/lista.png)
 
 Detalhe, nesse caso, é um exemplo "imperfeito", mas funcional, pois não foi incluído a funcionalidade de remover um item, mas para fins didáticos e de entendimento, é totalmente compreensível.
 
@@ -230,7 +230,7 @@ for jogo in jogos:
 
 ```
 
-![tupla.png](tupla.png)
+![tupla.png](Cyber-Blog/images/python-introduction/tupla.png)
 
 Nesse cenário convém usar tuplas, pois são jogos que já existem, portanto, não podem ser removidos, ou seja, a tupla não muda.
 A desvantagem nese caso é que também não pode receber itens novos.
@@ -262,7 +262,7 @@ Nesse cenário usamos dicionários, pois temos vários tipos de dados para serem
 
 Resultado:
 
-![dict.png](dict.png)
+![dict.png](Cyber-Blog/images/python-introduction/dict.png)
 
 ---
 
@@ -291,11 +291,11 @@ except ValueError as e:
 
 ```
 
-![except-0.png](except-0.png)
+![except-0.png](Cyber-Blog/images/python-introduction/except-0.png)
 
-![except-1.png](except-1.png)
+![except-1.png](Cyber-Blog/images/python-introduction/except-1.png)
 
-![except-erro.png](except-erro.png)
+![except-erro.png](Cyber-Blog/images/python-introduction/except-erro.png)
 
 ---
 
@@ -392,4 +392,4 @@ menu()
 
 Resultado:
 
-![result-project.png](result-project.png)
+![result-project.png](Cyber-Blog/images/python-introduction/result-project.png)
