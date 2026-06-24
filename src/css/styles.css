@@ -56,7 +56,7 @@ body {
 }
 
 .filter-btn.active {
-  background-color: #34d399;
+  background-color: #2f54f8;
   color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -74,7 +74,7 @@ body {
 }
 
 .filter-btn:hover {
-  background-color: #d1d5db;
+  background-color: #80aff5;
 }
 
 .logo-container {
