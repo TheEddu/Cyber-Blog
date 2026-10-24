@@ -1,7 +1,7 @@
 {
-	"name": "eleventy-base-blog",
-	"version": "9.0.0",
-	"description": "A starter repository for a blog web site using the Eleventy site generator.",
+	"name": "cyberblog",
+	"version": "1.0.0",
+	"description": "Blog sobre segurança da informação, programação e tecnologia.",
 	"type": "module",
 	"scripts": {
 		"build": "npx @11ty/eleventy",
@@ -15,9 +15,9 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/11ty/eleventy-base-blog.git"
+		"url": "https://github.com/TheEddu/Cyber-Blog.git"
 	},
-	"author": "Zach Leatherman (https://zachleat.com/)",
+	"author": "The Eddu",
 	"license": "MIT",
 	"engines": {
 		"node": ">=18"
@@ -27,9 +27,9 @@
 		"url": "https://opencollective.com/11ty"
 	},
 	"bugs": {
-		"url": "https://github.com/11ty/eleventy-base-blog/issues"
+		"url": "https://github.com/TheEddu/Cyber-Blog/issues"
 	},
-	"homepage": "https://github.com/11ty/eleventy-base-blog#readme",
+	"homepage": "https://github.com/TheEddu/Cyber-Blog#readme",
 	"devDependencies": {
 		"@11ty/eleventy": "^3.1.7",
 		"@11ty/eleventy-img": "^7.0.0",
