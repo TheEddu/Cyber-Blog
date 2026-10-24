@@ -1,8 +1,7 @@
-import { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from "@11ty/eleventy";
+import { IdAttributePlugin, HtmlBasePlugin } from "@11ty/eleventy";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
-import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 import pluginFilters from "./_config/filters.js";
 
@@ -25,6 +24,8 @@ export default async function(eleventyConfig) {
 		.addPassthroughCopy({
 			"./public/": "/"
 		})
+		.addPassthroughCopy({ "./css/": "/css/" })
+		.addPassthroughCopy({ "./content/blog/images/": "/images/" })
 		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
 
 	// Run Eleventy when these files change:
@@ -32,6 +33,7 @@ export default async function(eleventyConfig) {
 
 	// Watch CSS files
 	eleventyConfig.addWatchTarget("css/**/*.css");
+	eleventyConfig.addWatchTarget("public/js/**/*.js");
 	// Watch images for the image pipeline.
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpg,jpeg,gif}");
 
@@ -58,7 +60,6 @@ export default async function(eleventyConfig) {
 	});
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(HtmlBasePlugin);
-	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 
 	eleventyConfig.addPlugin(feedPlugin, {
 		type: "atom", // or "rss", "json"
@@ -75,39 +76,26 @@ export default async function(eleventyConfig) {
 			limit: 10,
 		},
 		metadata: {
-			language: "en",
-			title: "Blog Title",
-			subtitle: "This is a longer description about your blog.",
-			base: "https://example.com/",
+			language: "pt-BR",
+			title: "CyberBlog",
+			subtitle: "Artigos sobre segurança da informação, programação e tecnologia.",
+			base: "https://theeddu.github.io/Cyber-Blog/",
 			author: {
-				name: "Your Name"
+				name: "The Eddu"
 			}
 		}
 	});
 
-	// Image optimization: https://www.11ty.dev/docs/plugins/image/#eleventy-transform
-	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-		// Output formats for each image.
-		formats: ["avif", "webp", "auto"],
-
-		// widths: ["auto"],
-
-		failOnError: false,
-		htmlOptions: {
-			imgAttributes: {
-				// e.g. <img loading decoding> assigned on the HTML tag will override these values.
-				loading: "lazy",
-				decoding: "async",
-			}
-		},
-
-		sharpOptions: {
-			animated: true,
-		},
-	});
-
 	// Filters
 	eleventyConfig.addPlugin(pluginFilters);
+
+	// Keep the home page, archive, and previous/next links in one editorial order.
+	eleventyConfig.addCollection("editorialPosts", (collectionApi) => {
+		return [...collectionApi.getFilteredByTag("posts")].sort((a, b) => {
+			const orderDifference = (a.data.order ?? 999) - (b.data.order ?? 999);
+			return orderDifference || a.inputPath.localeCompare(b.inputPath);
+		});
+	});
 
 	eleventyConfig.addPlugin(IdAttributePlugin, {
 		// by default we use Eleventy’s built-in `slugify` filter:

@@ -1,28 +1,25 @@
 ---
 layout: layouts/base.njk
 ---
-{# Only include the syntax highlighter CSS on blog posts, included with the CSS per-page bundle #}
-<style>{% include "node_modules/prismjs/themes/prism-okaidia.css" %}</style>
-<style>{% include "css/prism-diff.css" %}</style>
-<h1>{{ title }}</h1>
-
-<ul class="post-metadata">
-	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
-	{%- for tag in tags | filterTagList %}
-	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
-	{%- endfor %}
-</ul>
-
-{{ content | safe }}
-
-{%- if collections.posts %}
-{%- set previousPost = collections.posts | getPreviousCollectionItem %}
-{%- set nextPost = collections.posts | getNextCollectionItem %}
-{%- if nextPost or previousPost %}
-<ul class="links-nextprev">
-	{%- if previousPost %}<li class="links-nextprev-prev">← Previous<br> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-	{%- if nextPost %}<li class="links-nextprev-next">Next →<br><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-</ul>
-{%- endif %}
-{%- endif %}
+<article class="article-container">
+	<a href="{{ '/' | url }}" class="back-link"><span aria-hidden="true">←</span> Voltar ao início</a>
+	<div class="article-meta"><time datetime="{{ date | htmlDateString }}">{{ date | readableDate("LLLL yyyy") }}</time></div>
+	<div id="content">{{ content | safe }}</div>
+	<nav class="article-navigation" aria-label="Navegação entre artigos">
+		{% set previousPost = collections.editorialPosts | getPreviousCollectionItem %}
+		{% set nextPost = collections.editorialPosts | getNextCollectionItem %}
+		{% if previousPost %}
+		<a class="article-nav-card article-nav-previous" href="{{ previousPost.url }}">
+			<span class="article-nav-label"><span aria-hidden="true">←</span> Artigo anterior</span>
+			<span class="article-nav-title">{{ previousPost.data.title }}</span>
+		</a>
+		{% else %}<span class="article-nav-card article-nav-empty" aria-hidden="true"></span>{% endif %}
+		<a class="article-home-button" href="{{ '/' | url }}"><span aria-hidden="true">⌂</span> Início</a>
+		{% if nextPost %}
+		<a class="article-nav-card article-nav-next" href="{{ nextPost.url }}">
+			<span class="article-nav-label">Próximo artigo <span aria-hidden="true">→</span></span>
+			<span class="article-nav-title">{{ nextPost.data.title }}</span>
+		</a>
+		{% else %}<span class="article-nav-card article-nav-empty" aria-hidden="true"></span>{% endif %}
+	</nav>
+</article>

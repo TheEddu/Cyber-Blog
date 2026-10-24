@@ -3,7 +3,7 @@ import { DateTime } from "luxon";
 export default function(eleventyConfig) {
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
 		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
-		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
+		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).setLocale("pt-BR").toFormat(format || "dd LLLL yyyy");
 	});
 
 	eleventyConfig.addFilter("htmlDateString", (dateObj) => {
@@ -34,7 +34,8 @@ export default function(eleventyConfig) {
 	});
 
 	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-		return (tags || []).filter(tag => ["all", "posts"].indexOf(tag) === -1);
+		const allowedTags = ["database", "cybersecurity", "docker", "desenvolvimento-pessoal", "redes", "shell"];
+		return (tags || []).filter(tag => allowedTags.includes(tag));
 	});
 
 	eleventyConfig.addFilter("sortAlphabetically", strings =>
