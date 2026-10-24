@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+---
+<article class="article-container">
+	<a href="/" class="back-link"><span aria-hidden="true">←</span> Voltar ao início</a>
+	<div class="article-meta"><time datetime="{{ date | htmlDateString }}">{{ date | readableDate("LLLL yyyy") }}</time></div>
+	<div id="content">{{ content | safe }}</div>
+	<nav class="article-navigation" aria-label="Navegação entre artigos">
+		{% set previousPost = collections.editorialPosts | getPreviousCollectionItem %}
+		{% set nextPost = collections.editorialPosts | getNextCollectionItem %}
+		{% if previousPost %}
+		<a class="article-nav-card article-nav-previous" href="{{ previousPost.url }}">
+			<span class="article-nav-label"><span aria-hidden="true">←</span> Artigo anterior</span>
+			<span class="article-nav-title">{{ previousPost.data.title }}</span>
+		</a>
+		{% else %}<span class="article-nav-card article-nav-empty" aria-hidden="true"></span>{% endif %}
+		<a class="article-home-button" href="/"><span aria-hidden="true">⌂</span> Início</a>
+		{% if nextPost %}
+		<a class="article-nav-card article-nav-next" href="{{ nextPost.url }}">
+			<span class="article-nav-label">Próximo artigo <span aria-hidden="true">→</span></span>
+			<span class="article-nav-title">{{ nextPost.data.title }}</span>
+		</a>
+		{% else %}<span class="article-nav-card article-nav-empty" aria-hidden="true"></span>{% endif %}
+	</nav>
+</article>
