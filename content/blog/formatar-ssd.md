@@ -1,3 +1,9 @@
+---
+description: >-
+  Durante a organização do meu ambiente Arch Linux, aproveitei um SSD Kingston A400 de 240 GB para transformá-lo em uma unidade de armazenamento secundário.
+image: "https://images.unsplash.com/photo-1781914476939-91a41b914899?q=80&w=1354&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+---
+
 # Como formatar um SSD secundário no Arch Linux e configurar a montagem automática
 
 Trabalhando com um ambiente Linux, é comum reaproveitar unidades de armazenamento que já foram utilizadas em outras instalações. Mas... ao conectar um SSD secundário, o ambiente gráfico pode apresentar erros ao tentar montar suas partições.
