@@ -4,9 +4,10 @@ const sourceFor = (data) => {
 	try { return readFileSync(data.page.inputPath, "utf8"); } catch { return ""; }
 };
 
-const allowedTags = ["database", "cybersecurity", "docker", "desenvolvimento-pessoal", "redes", "shell"];
+const allowedTags = ["database", "cybersecurity", "docker", "desenvolvimento-pessoal", "redes", "shell", "linux"];
 const tagBySlug = {
 	infoSec: ["cybersecurity"],
+	"formatar-ssd": ["linux"],
 	kaizen: ["desenvolvimento-pessoal"],
 	scriptDocker: ["docker", "shell"],
 	"mysql-docker": ["docker", "database"],
@@ -23,17 +24,18 @@ const tagBySlug = {
 // Sequência editorial da home e da navegação entre artigos.
 const editorialOrder = {
 	infoSec: 1,
-	kaizen: 2,
-	scriptDocker: 3,
-	"mysql-docker": 4,
-	modoAnonimo: 5,
-	social: 6,
-	MalwareConhecendoECombatendoEssesInimigos: 7,
-	senhasSeguras: 8,
-	sqlVideoGameSales: 9,
-	routerConfiguration: 10,
-	protocolosPortas: 11,
-	zabbixErrorHandling: 12,
+	"formatar-ssd": 2,
+	kaizen: 3,
+	scriptDocker: 4,
+	"mysql-docker": 5,
+	modoAnonimo: 6,
+	social: 7,
+	MalwareConhecendoECombatendoEssesInimigos: 8,
+	senhasSeguras: 9,
+	sqlVideoGameSales: 10,
+	routerConfiguration: 11,
+	protocolosPortas: 12,
+	zabbixErrorHandling: 13,
 };
 const homeDescriptions = {
 	infoSec: "Meu primeiro artigo, introdução a segurança da informação, alguns tópicos e conceitos fundamentais, baseado nos meus estudos.",

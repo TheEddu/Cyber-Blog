@@ -34,7 +34,7 @@ export default function(eleventyConfig) {
 	});
 
 	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-		const allowedTags = ["database", "cybersecurity", "docker", "desenvolvimento-pessoal", "redes", "shell"];
+		const allowedTags = ["database", "cybersecurity", "docker", "desenvolvimento-pessoal", "redes", "shell", "linux"];
 		return (tags || []).filter(tag => allowedTags.includes(tag));
 	});
 

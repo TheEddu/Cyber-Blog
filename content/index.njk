@@ -20,9 +20,18 @@ title: CyberBlog | Segurança da Informação e Tecnologia
 <section class="text-center py-4" aria-label="Filtrar artigos por assunto">
 	<div class="inline-flex">
 		<button class="filter-btn active" type="button" data-filter="all">Todas</button>
-		{% set allTags = [] %}
-		{% for post in posts %}{% for tag in post.data.tags %}{% if tag != "posts" and tag not in allTags %}{% set allTags = (allTags.push(tag), allTags) %}{% endif %}{% endfor %}{% endfor %}
-		{% for tag in allTags | sort %}<button class="filter-btn" type="button" data-filter="{{ tag | slugify }}">{{ tag }}</button>{% endfor %}
+		{% set tagFilters = [
+			{ name: "Database", slug: "database" },
+			{ name: "Cybersecurity", slug: "cybersecurity" },
+			{ name: "Docker", slug: "docker" },
+			{ name: "Desenvolvimento Pessoal", slug: "desenvolvimento-pessoal" },
+			{ name: "Redes", slug: "redes" },
+			{ name: "Shell", slug: "shell" },
+			{ name: "Linux", slug: "linux" }
+		] %}
+		{% for tag in tagFilters %}
+			<button class="filter-btn" type="button" data-filter="{{ tag.slug }}">{{ tag.name }}</button>
+		{% endfor %}
 	</div>
 </section>
 <section id="labs" class="labs" aria-label="Artigos">
